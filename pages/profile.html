@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Profile Management - View and Edit Personal Student Details">
+    <title>StudentHub - Student Profile</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Header -->
+    <header>
+        <h1>Student Profile Management</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>View and update registered account details for <b>Aarav Patel</b></small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Navigation -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="profile.html">Student Profile</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <!-- Lesson 3: Image with relative/absolute paths & privacy/alt attributes -->
+        <section id="avatar-section">
+            <h2>Current Profile Picture</h2>
+            <p>
+                <img src="https://via.placeholder.com/150.png?text=Aarav+Patel+Avatar" 
+                     alt="Aarav Patel Profile Avatar Placeholder" 
+                     width="150" 
+                     height="150" 
+                     loading="lazy" 
+                     referrerpolicy="no-referrer">
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 5: Readonly Profile Data Table using Colspan & Rowspan -->
+        <section id="profile-summary-table">
+            <h2>Official Student Record Details</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption><strong>Table 1: University Identity &amp; Contact Card</strong></caption>
+
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="2">Personal Identity</th>
+                        <td><strong>Full Name:</strong> Aarav Patel</td>
+                        <td><strong>Student Roll ID:</strong> 26IT001</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gender:</strong> Male</td>
+                        <td><strong>Date of Birth:</strong> May 14, 2005</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">Academic Program</th>
+                        <td><strong>Institute:</strong> DEPSTAR CHARUSAT</td>
+                        <td><strong>Department:</strong> Information Technology</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Academic Term:</strong> Semester 3 (2026-27)</td>
+                        <td><strong>Status:</strong> Regular Full-Time</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Online Profiles</th>
+                        <td colspan="2">
+                            <strong>GitHub Profile:</strong> 
+                            <a href="https://github.com/aaravpatel" target="_blank" rel="noopener noreferrer">github.com/aaravpatel</a> | 
+                            <strong>LinkedIn:</strong> 
+                            <a href="https://linkedin.com/in/aaravpatel" target="_blank" rel="noopener noreferrer">linkedin.com/in/aaravpatel</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 6: Profile Update Form with Input Validation Attributes -->
+        <section id="edit-profile-form">
+            <h2>Update Profile Details</h2>
+
+            <form action="profile.html" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="user_id" value="USER_26IT001">
+
+                <fieldset>
+                    <legend><strong>Editable Profile Information</strong></legend>
+
+                    <!-- File upload input for avatar -->
+                    <p>
+                        <label for="new_avatar">Upload New Avatar Image (PNG, JPG):</label><br>
+                        <input type="file" id="new_avatar" name="avatar" accept="image/png, image/jpeg">
+                    </p>
+
+                    <!-- Text input -->
+                    <p>
+                        <label for="prof_name">Full Name *:</label><br>
+                        <input type="text" 
+                               id="prof_name" 
+                               name="fullname" 
+                               value="Aarav Patel" 
+                               required 
+                               minlength="3" 
+                               maxlength="50">
+                    </p>
+
+                    <!-- Readonly Email input -->
+                    <p>
+                        <label for="prof_email">University Email (Readonly):</label><br>
+                        <input type="email" 
+                               id="prof_email" 
+                               name="email" 
+                               value="aarav.p@charusat.edu.in" 
+                               readonly>
+                    </p>
+
+                    <!-- Telephone input -->
+                    <p>
+                        <label for="prof_phone">Phone Contact Number *:</label><br>
+                        <input type="tel" 
+                               id="prof_phone" 
+                               name="phone" 
+                               value="9876543210" 
+                               required 
+                               minlength="10" 
+                               maxlength="10">
+                    </p>
+
+                    <!-- URL input -->
+                    <p>
+                        <label for="prof_github">GitHub Profile URL:</label><br>
+                        <input type="url" 
+                               id="prof_github" 
+                               name="github_url" 
+                               value="https://github.com/aaravpatel" 
+                               placeholder="https://github.com/username">
+                    </p>
+
+                    <!-- Textarea input -->
+                    <p>
+                        <label for="prof_bio">Short Student Bio (Max 250 characters):</label><br>
+                        <textarea id="prof_bio" 
+                                  name="bio" 
+                                  rows="4" 
+                                  cols="50" 
+                                  maxlength="250">3rd semester Information Technology student interested in HTML5 semantic elements, data tables, and client-side form validation.</textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Save Profile Changes</button>
+                        <button type="reset">Revert Changes</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
+    </footer>
+
+</body>
+</html>

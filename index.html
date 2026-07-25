@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudentHub - Central Campus Portal for CHARUSAT Students">
+    <title>StudentHub - Home Page</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Document Structure & Header -->
+    <header>
+        <h1>StudentHub Central Portal</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>Devang Patel Institute of Advance Technology &amp; Research | Course: <em>ITUE203 - Web Development Frameworks</em></small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Internal Navigation Menu -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/register.html">Student Registration</a></li>
+            <li><a href="pages/login.html">User Login</a></li>
+            <li><a href="pages/dashboard.html">Student Dashboard</a></li>
+            <li><a href="pages/events.html">Campus Events</a></li>
+            <li><a href="pages/profile.html">Student Profile</a></li>
+            <li><a href="pages/contact.html">Contact Support</a></li>
+            <li><a href="pages/admin.html">Admin Portal</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
+            <li><a href="pages/feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!-- Lesson 6: Quick Portal Search Form -->
+    <section>
+        <h2>Portal Quick Search</h2>
+        <form action="index.html" method="get">
+            <p>
+                <label for="site-search">Search Portal Content:</label>
+                <input type="search" id="site-search" name="q" placeholder="Search events, courses, FAQs..." required minlength="2" maxlength="50">
+                <button type="submit">Search</button>
+                <button type="reset">Clear</button>
+            </p>
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- Lesson 2: Headings, Text Formatting, Elements -->
+    <main>
+        <section id="welcome-section">
+            <h2>Welcome to StudentHub</h2>
+            <p>
+                StudentHub is an <strong>integrated academic management system</strong> designed to assist students in tracking their <em>academic schedule</em>, registering for <u>campus hackathons</u>, and maintaining their official profile.
+            </p>
+            <p>
+                <mark>Important Notice:</mark> Registration for the 2026<sup>th</sup> Academic Cycle (Semester 3) is currently <strong>ACTIVE</strong>.
+            </p>
+
+            <!-- Lesson 3: Image with relative/absolute paths & security/privacy attributes -->
+            <p>
+                <img src="https://via.placeholder.com/600x200.png?text=CHARUSAT+StudentHub+Campus+Portal" 
+                     alt="CHARUSAT Campus Banner Placeholder" 
+                     width="600" 
+                     height="200" 
+                     loading="lazy" 
+                     referrerpolicy="no-referrer">
+            </p>
+        </section>
+
+        <section id="announcements">
+            <h2>Latest Campus Announcements</h2>
+
+            <article>
+                <h3>1. Mid-Semester Examination Schedule <small>(Academic Update)</small></h3>
+                <p>Published on: <ins>July 24, 2026</ins> | Author: <b>Academic Section</b></p>
+                <p>
+                    The mid-semester timetable for 3<sup>rd</sup> semester B.Tech students has been published. 
+                    Please check the <a href="pages/dashboard.html#schedule">Dashboard Schedule</a> for room allocations.
+                </p>
+                <p>
+                    <del>Old Exam Start Date: August 1, 2026</del><br>
+                    <strong>Revised Exam Start Date: August 5, 2026</strong>
+                </p>
+            </article>
+
+            <br>
+
+            <article>
+                <h3>2. Annual Web Hackathon 2026</h3>
+                <p>Published on: <ins>July 20, 2026</ins> | Category: <i>Technical Competition</i></p>
+                <p>
+                    Participants must build responsive web projects using standard HTML elements. 
+                    Registration closes on <mark>August 2, 2026</mark>. 
+                    Visit the <a href="pages/events.html">Campus Events Page</a> to register your team.
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 4: Unordered and Nested Lists -->
+        <section id="portal-highlights">
+            <h2>Key Portal Services</h2>
+            <ul>
+                <li><strong>Academic Management</strong>
+                    <ul>
+                        <li>View course enrollment list</li>
+                        <li>Check examination schedules &amp; results</li>
+                    </ul>
+                </li>
+                <li><strong>Campus Activities</strong>
+                    <ul>
+                        <li>Technical workshops &amp; seminars</li>
+                        <li>Cultural and sports event registration</li>
+                    </ul>
+                </li>
+                <li><strong>Student Support</strong>
+                    <ul>
+                        <li>Direct inquiry submission</li>
+                        <li>Frequently Asked Questions (<a href="pages/faq.html">FAQ</a>)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 3: External Links with Security Attributes -->
+        <section id="external-resources">
+            <h2>External University Links</h2>
+            <p>
+                Visit the official website: 
+                <a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">CHARUSAT Official Portal</a> 
+                <small>(Opens in a new tab with <code>rel="noopener noreferrer"</code> for link security)</small>.
+            </p>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Lesson 1 & 2: Footer & Contact Info -->
+    <footer>
+        <p><small>&copy; 2026 StudentHub Portal | CHARUSAT DEPSTAR - ITUE203</small></p>
+        <p><small><a href="#welcome-section">Back to Top of Page</a></small></p>
+    </footer>
+
+</body>
+</html>

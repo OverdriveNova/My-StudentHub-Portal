@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Dashboard - View Enrolled Courses, Timetable, and Academic Notices">
+    <title>StudentHub - Student Dashboard</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Header -->
+    <header>
+        <h1>Student Academic Dashboard</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>Semester 3 (2026-27 ODD Term) | Logged-in User: <b>Aarav Patel</b></small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Navigation -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="profile.html">Student Profile</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!-- Lesson 3: Internal Page Jump Links (Anchors) -->
+    <section id="dashboard-anchors">
+        <h2>Dashboard Quick Jump Links</h2>
+        <p>Jump to section: 
+            <a href="#student-info">Student Profile Summary</a> | 
+            <a href="#courses">Enrolled Courses Table</a> | 
+            <a href="#schedule">Weekly Schedule</a> | 
+            <a href="#notices">Academic Notices</a>
+        </p>
+    </section>
+
+    <hr>
+
+    <main>
+        <!-- Lesson 5: Profile Summary Table with Rowspan & Colspan -->
+        <section id="student-info">
+            <h2>Student Profile Summary</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption><strong>Table 1: Student Metadata &amp; Status</strong></caption>
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="2">Student Identity</th>
+                        <td><strong>Full Name:</strong> Aarav Patel</td>
+                        <td><strong>ID Number:</strong> 26IT001</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email:</strong> aarav.p@charusat.edu.in</td>
+                        <td><strong>Status:</strong> <mark>Active Enrolled</mark></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Academic Standing</th>
+                        <td><strong>Department:</strong> Information Technology</td>
+                        <td><strong>Term:</strong> Semester 3 (ODD)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Overall Progress</th>
+                        <td colspan="2"><strong>Attendance Rate:</strong> 92% | <strong>Passed Credits:</strong> 24 / 24</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 5: Complex Course Schedule Data Table -->
+        <section id="courses">
+            <h2>Enrolled Modules (Semester 3)</h2>
+
+            <!-- Lesson 6: Search Filter Form -->
+            <form action="dashboard.html" method="get">
+                <p>
+                    <label for="course-filter">Filter Enrolled Modules:</label>
+                    <input type="search" id="course-filter" name="filter" placeholder="e.g., ITUE203" required>
+                    <button type="submit">Filter List</button>
+                    <button type="reset">Show All</button>
+                </p>
+            </form>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption><strong>Table 2: Semester 3 Registered Subjects &amp; Credit Allocation</strong></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Subject Code</th>
+                        <th scope="col">Subject Title</th>
+                        <th scope="col">Faculty Instructor</th>
+                        <th scope="col">Lecture Credits</th>
+                        <th scope="col">Practical Credits</th>
+                        <th scope="col">Total Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ITUE203</th>
+                        <td>Web Development Frameworks</td>
+                        <td>Dr. A. Patel</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ITUE201</th>
+                        <td>Data Structures &amp; Algorithms</td>
+                        <td>Prof. R. Shah</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ITUE202</th>
+                        <td>Database Management Systems</td>
+                        <td>Dr. S. Mehta</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MAUE201</th>
+                        <td>Engineering Mathematics III</td>
+                        <td>Prof. K. Joshi</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Total Credit Units Registered</th>
+                        <td>11</td>
+                        <td>4</td>
+                        <td><strong>15 Credits</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 4: Ordered List with Roman Numerals (type="I") -->
+        <section id="schedule">
+            <h2>Weekly Academic Schedule (Lab &amp; Practical Order)</h2>
+            <ol type="I">
+                <li><strong>Monday &amp; Wednesday:</strong> Web Development Frameworks (ITUE203) - Computer Lab 3 (09:00 AM - 11:00 AM)</li>
+                <li><strong>Tuesday:</strong> Database Management Systems (ITUE202) - Computer Lab 1 (11:15 AM - 01:15 PM)</li>
+                <li><strong>Thursday:</strong> Data Structures &amp; Algorithms Lab - Computer Lab 2 (02:00 PM - 04:00 PM)</li>
+                <li><strong>Friday:</strong> Engineering Mathematics Tutorial - Lecture Hall 102 (10:00 AM - 11:00 AM)</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 2: Formatting Elements & Paragraphs -->
+        <section id="notices">
+            <h2>Academic Notices for Aarav Patel</h2>
+            <ul>
+                <li>
+                    <strong>Practical Submission Reminder:</strong> 
+                    Practical 1 &amp; Practical 2 HTML files must be uploaded to GitHub before <ins>August 2, 2026</ins>.
+                </li>
+                <li>
+                    <strong>Workshop Invitation:</strong> 
+                    Web Innovation Hackathon details are posted on the <a href="events.html">Campus Events Page</a>.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
+    </footer>
+
+</body>
+</html>

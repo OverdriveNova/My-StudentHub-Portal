@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Support - Campus Location, Department Directory Table, and Inquiry Form">
+    <title>StudentHub - Contact Support</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Header -->
+    <header>
+        <h1>Campus Support &amp; Contact Directory</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>Get in touch with administrative offices, department faculties, and IT helpdesk</small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Navigation -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <!-- Lesson 1 & 2: Address Element & Formatting -->
+        <section id="location-info">
+            <h2>Campus Location Address</h2>
+            <address>
+                <strong>Devang Patel Institute of Advance Technology &amp; Research (DEPSTAR)</strong><br>
+                Charotar University of Science and Technology (CHARUSAT)<br>
+                CHARUSAT Campus, Off Nadiad-Petlad Highway, Changa - 388421<br>
+                Anand District, Gujarat, India<br><br>
+                <strong>General Telephone:</strong> +91 2697 265011 / 265021<br>
+                <strong>Official Email:</strong> <a href="mailto:info@charusat.ac.in">info@charusat.ac.in</a>
+            </address>
+
+            <p>
+                <!-- Lesson 3: External Map Link -->
+                Visit Map Location: 
+                <a href="https://maps.google.com/?q=CHARUSAT+University" target="_blank" rel="noopener noreferrer">CHARUSAT Google Maps Location</a> 
+                <small>(Opens in a external tab)</small>.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 5: Department Contacts Directory Table -->
+        <section id="directory-table">
+            <h2>Department Support Directory</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption><strong>Table 1: Key Campus Department Contacts &amp; Email Directory</strong></caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Department / Office</th>
+                        <th scope="col">Contact Person</th>
+                        <th scope="col">Telephone Extension</th>
+                        <th scope="col">Official Email Address</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Department of Information Technology</th>
+                        <td>Dr. A. Patel (HOD)</td>
+                        <td>Ext. 5101</td>
+                        <td><a href="mailto:hod.it@charusat.ac.in">hod.it@charusat.ac.in</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">DEPSTAR Administrative Office</th>
+                        <td>Principal Office</td>
+                        <td>Ext. 5020</td>
+                        <td><a href="mailto:principal.depstar@charusat.ac.in">principal.depstar@charusat.ac.in</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IT Infrastructure &amp; Helpdesk</th>
+                        <td>System Admin Desk</td>
+                        <td>Ext. 5555</td>
+                        <td><a href="mailto:helpdesk@charusat.ac.in">helpdesk@charusat.ac.in</a></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Office Working Hours</th>
+                        <td colspan="2"><strong>Monday - Saturday: 09:00 AM to 04:30 PM</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 6: Inquiry Form with Form Validation -->
+        <section id="inquiry-form-section">
+            <h2>Send Support Inquiry Message</h2>
+
+            <form action="contact.html" method="post">
+                <fieldset>
+                    <legend><strong>Inquiry Submission Form</strong></legend>
+
+                    <p>
+                        <label for="sender_name">Your Full Name *:</label><br>
+                        <input type="text" 
+                               id="sender_name" 
+                               name="sender_name" 
+                               placeholder="e.g., Aarav Patel" 
+                               required 
+                               minlength="3" 
+                               maxlength="50">
+                    </p>
+
+                    <p>
+                        <label for="sender_email">Your Email Address *:</label><br>
+                        <input type="email" 
+                               id="sender_email" 
+                               name="sender_email" 
+                               placeholder="e.g., aarav.p@charusat.edu.in" 
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="sender_phone">Contact Phone Number:</label><br>
+                        <input type="tel" 
+                               id="sender_phone" 
+                               name="sender_phone" 
+                               placeholder="10-digit mobile number" 
+                               minlength="10" 
+                               maxlength="10">
+                    </p>
+
+                    <p>
+                        <label for="inquiry_type">Inquiry Department Category *:</label><br>
+                        <select id="inquiry_type" name="inquiry_type" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="academic">Academic &amp; Exam Query</option>
+                            <option value="portal">StudentHub Portal Technical Issue</option>
+                            <option value="events">Event Registration Query</option>
+                            <option value="other">General Inquiry</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="subject">Message Subject *:</label><br>
+                        <input type="text" 
+                               id="subject" 
+                               name="subject" 
+                               placeholder="Brief subject summary" 
+                               required 
+                               maxlength="100">
+                    </p>
+
+                    <p>
+                        <label for="message_body">Detailed Message Description *:</label><br>
+                        <textarea id="message_body" 
+                                  name="message_body" 
+                                  rows="6" 
+                                  cols="55" 
+                                  required 
+                                  maxlength="500" 
+                                  placeholder="Describe your query or technical issue in detail..."></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Send Inquiry Message</button>
+                        <button type="reset">Clear Form</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
+    </footer>
+
+</body>
+</html>

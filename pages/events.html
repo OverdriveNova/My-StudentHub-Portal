@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Events Listing - Technical Hackathons, Workshops, and Sports Events">
+    <title>StudentHub - Campus Events</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Header -->
+    <header>
+        <h1>Campus Events &amp; Activities</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>Discover and register for upcoming university hackathons, seminars, and sports meets</small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Navigation -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="profile.html">Student Profile</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <!-- Lesson 6: Event Search & Filter Form -->
+        <section id="event-filter">
+            <h2>Search &amp; Filter Events</h2>
+            <form action="events.html" method="get">
+                <p>
+                    <label for="event-keyword">Event Keyword:</label>
+                    <input type="search" id="event-keyword" name="keyword" placeholder="e.g., Hackathon, Sports...">
+                    
+                    <label for="event-category">Category:</label>
+                    <select id="event-category" name="category">
+                        <option value="">-- All Categories --</option>
+                        <option value="technical">Technical Competitions</option>
+                        <option value="workshop">Academic Workshops</option>
+                        <option value="sports">Sports &amp; Fitness</option>
+                    </select>
+
+                    <label for="event-date">Start Date From:</label>
+                    <input type="date" id="event-date" name="from_date">
+
+                    <button type="submit">Filter Events</button>
+                    <button type="reset">Clear Filter</button>
+                </p>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 2 & 3: Events List with Images and Formatting -->
+        <section id="upcoming-events">
+            <h2>Upcoming Campus Events</h2>
+
+            <article>
+                <h3>1. Web Innovation Hackathon 2026</h3>
+                <p>
+                    <!-- Lesson 3: Image with relative/absolute paths & security/privacy attributes -->
+                    <img src="https://via.placeholder.com/400x150.png?text=Web+Innovation+Hackathon+2026" 
+                         alt="Web Innovation Hackathon Banner" 
+                         width="400" 
+                         height="150" 
+                         loading="lazy" 
+                         referrerpolicy="no-referrer">
+                </p>
+                <p><strong>Category:</strong> <mark>Technical Hackathon</mark></p>
+                <p><strong>Event Dates:</strong> August 12 - August 14, 2026 (3 Days)</p>
+                <p><strong>Venue:</strong> IT Seminar Hall, DEPSTAR CHARUSAT</p>
+                <p>
+                    Build accessible full-stack web applications using HTML5 semantic elements, data tables, and structured forms. Cash prizes for top 3 teams!
+                </p>
+                
+                <!-- Lesson 6: Individual Event Registration Button Form -->
+                <form action="register.html" method="get">
+                    <input type="hidden" name="event_id" value="EVT_HACKATHON_2026">
+                    <button type="submit">Register for Web Hackathon</button>
+                </form>
+            </article>
+
+            <br><hr><br>
+
+            <article>
+                <h3>2. Annual Sports Meet 2026</h3>
+                <p>
+                    <img src="https://via.placeholder.com/400x150.png?text=CHARUSAT+Annual+Sports+Meet" 
+                         alt="CHARUSAT Sports Tournament Banner" 
+                         width="400" 
+                         height="150" 
+                         loading="lazy" 
+                         referrerpolicy="no-referrer">
+                </p>
+                <p><strong>Category:</strong> <em>Sports &amp; Fitness</em></p>
+                <p><strong>Event Date:</strong> August 25, 2026</p>
+                <p><strong>Venue:</strong> University Sports Complex &amp; Athletics Ground</p>
+                <p>
+                    Inter-departmental chess, table tennis, badminton, and track events. Open to all registered CHARUSAT students.
+                </p>
+
+                <form action="register.html" method="get">
+                    <input type="hidden" name="event_id" value="EVT_SPORTS_2026">
+                    <button type="submit">Register for Sports Meet</button>
+                </form>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 5: Schedule Table with Rowspan and Colspan -->
+        <section id="event-schedule-table">
+            <h2>Detailed Events Timetable &amp; Venue Capacity</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption><strong>Table 1: Upcoming Event Slots, Venues, and Seating Capacity</strong></caption>
+                
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time Slot</th>
+                        <th scope="col">Event Name</th>
+                        <th scope="col">Building / Venue</th>
+                        <th scope="col">Capacity Details</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="2">Aug 12, 2026</th>
+                        <td>09:00 AM - 12:00 PM</td>
+                        <td>Hackathon Opening Ceremony</td>
+                        <td>IT Seminar Hall</td>
+                        <td rowspan="2">250 Seats <small>(Hall A &amp; B Combined)</small></td>
+                    </tr>
+                    <tr>
+                        <td>01:00 PM - 05:00 PM</td>
+                        <td>Hackathon Coding Round 1</td>
+                        <td>Computer Lab 3 &amp; 4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Aug 13, 2026</th>
+                        <td>10:00 AM - 04:00 PM</td>
+                        <td>Hackathon Prototype Evaluation</td>
+                        <td>DEPSTAR Seminar Hall</td>
+                        <td>500 Seats</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Aug 25, 2026</th>
+                        <td>08:30 AM - 05:00 PM</td>
+                        <td>Annual Sports Meet Tournaments</td>
+                        <td colspan="2">CHARUSAT Sports Ground &amp; Indoor Complex <small>(Open Campus Capacity)</small></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Total Events Scheduled</th>
+                        <td colspan="2"><strong>3 Major Events Registered</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
+    </footer>
+
+</body>
+</html>

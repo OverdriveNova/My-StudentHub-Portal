@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Control Dashboard - System Monitoring and Audit Logs">
+    <title>StudentHub - Admin Dashboard</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Header -->
+    <header>
+        <h1>Admin Control Dashboard</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>System Moderation, Student Accounts &amp; Audit Trail</small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Navigation -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <!-- Lesson 6: Admin Action Form -->
+        <section id="admin-actions">
+            <h2>Administrative Quick Actions &amp; User Search</h2>
+
+            <form action="admin.html" method="get">
+                <input type="hidden" name="action_source" value="ADMIN_CONSOLE_V1">
+
+                <p>
+                    <label for="admin-search">Search Registered User / Log ID:</label>
+                    <input type="search" id="admin-search" name="search_user" placeholder="e.g., 26IT001 or Aarav" required>
+                    
+                    <label for="user-role-filter">User Role:</label>
+                    <select id="user-role-filter" name="role">
+                        <option value="all">All Roles</option>
+                        <option value="student">Registered Students</option>
+                        <option value="faculty">Faculty Members</option>
+                        <option value="admin">System Administrators</option>
+                    </select>
+
+                    <button type="submit">Search Records</button>
+                    <button type="reset">Reset Search</button>
+                </p>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 5: Complex User Management Data Table -->
+        <section id="user-table-section">
+            <h2>Registered Users &amp; Security Roles Table</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption><strong>Table 1: StudentHub Registered Users &amp; Role-Based Access Control</strong></caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col" rowspan="2">User ID</th>
+                        <th scope="col" rowspan="2">Full Name</th>
+                        <th scope="col" rowspan="2">Registered Email</th>
+                        <th scope="col" colspan="2">System Role &amp; Access</th>
+                        <th scope="col" rowspan="2">Account Status</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Department</th>
+                        <th scope="col">Assigned Role</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">101</th>
+                        <td>Aarav Patel</td>
+                        <td>aarav.p@charusat.edu.in</td>
+                        <td>Information Technology</td>
+                        <td>Student</td>
+                        <td><mark>Active</mark></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">102</th>
+                        <td>Priya Sharma</td>
+                        <td>priya.s@charusat.edu.in</td>
+                        <td>Computer Engineering</td>
+                        <td>Student</td>
+                        <td><mark>Active</mark></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">103</th>
+                        <td>Dr. A. Patel</td>
+                        <td>apatel.it@charusat.edu.in</td>
+                        <td>Information Technology</td>
+                        <td>Faculty Instructor</td>
+                        <td><mark>Active</mark></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">104</th>
+                        <td>System Admin Desk</td>
+                        <td>admin@charusat.edu.in</td>
+                        <td>University IT Central</td>
+                        <td>Super Admin</td>
+                        <td><mark>Active</mark></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Total Registered System Users</th>
+                        <td colspan="3"><strong>4 Active Accounts Managed</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Lesson 4: Ordered List with start attribute for audit trail -->
+        <section id="audit-trail">
+            <h2>Recent Security &amp; Administrative Audit Logs</h2>
+
+            <ol type="1" start="101">
+                <li>
+                    <strong>[Log #101]</strong> User <em>aarav.p@charusat.edu.in</em> registered via <a href="register.html">Registration Form</a> on <ins>July 24, 2026</ins>.
+                </li>
+                <li>
+                    <strong>[Log #102]</strong> Admin desk updated course syllabus table in <a href="about.html">About Page</a>.
+                </li>
+                <li>
+                    <strong>[Log #103]</strong> New campus event <mark>Web Innovation Hackathon 2026</mark> added to <a href="events.html">Events Page</a> schedule table.
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 StudentHub Admin | <a href="../index.html">Return to Home Page</a></small></p>
+    </footer>
+
+</body>
+</html>

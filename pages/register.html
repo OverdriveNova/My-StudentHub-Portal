@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Registration Form - Demonstrating Lesson 6 HTML Form Inputs and Attributes">
+    <title>StudentHub - Registration</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Header -->
+    <header>
+        <h1>Student Registration Portal</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>Course: <em>ITUE203 - Web Development Frameworks</em> | Lesson 6 Form Demonstration</small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Navigation -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="profile.html">Student Profile</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <section id="registration-section">
+            <h2>New Student Registration Form</h2>
+            <p>
+                <small>Fields marked with <strong>*</strong> are mandatory for account creation.</small>
+            </p>
+
+            <!-- Lesson 6: Comprehensive Form showcasing action, method, and input types/attributes -->
+            <form action="register.html" method="post" enctype="multipart/form-data">
+
+                <!-- Hidden Input -->
+                <input type="hidden" id="form_id" name="form_id" value="REG_FORM_2026_V1">
+                <input type="hidden" id="academic_year" name="academic_year" value="2026-2027">
+
+                <!-- System Metadata (Readonly & Disabled Input Types) -->
+                <fieldset>
+                    <legend><strong>System Metadata (Readonly &amp; Disabled Inputs)</strong></legend>
+                    <p>
+                        <label for="system_code">University Code (Readonly):</label><br>
+                        <input type="text" id="system_code" name="system_code" value="CHARUSAT-DEPSTAR-ITUE203" readonly size="30">
+                    </p>
+                    <p>
+                        <label for="auto_id">Generated Tracking ID (Disabled):</label><br>
+                        <input type="text" id="auto_id" name="auto_id" value="AUTO-REG-99410" disabled size="30">
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend><strong>Personal &amp; Contact Details</strong></legend>
+
+                    <!-- Text Input -->
+                    <p>
+                        <label for="fullname">Full Name *:</label><br>
+                        <input type="text" 
+                               id="fullname" 
+                               name="fullname" 
+                               placeholder="e.g., Aarav Patel" 
+                               required 
+                               minlength="3" 
+                               maxlength="50">
+                    </p>
+
+                    <!-- Email Input -->
+                    <p>
+                        <label for="email">CHARUSAT Email Address *:</label><br>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               placeholder="e.g., 26it001@charusat.edu.in" 
+                               required>
+                    </p>
+
+                    <!-- Password Inputs -->
+                    <p>
+                        <label for="password">Create Password *:</label><br>
+                        <input type="password" 
+                               id="password" 
+                               name="password" 
+                               required 
+                               minlength="8" 
+                               maxlength="20" 
+                               placeholder="Minimum 8 characters">
+                    </p>
+
+                    <p>
+                        <label for="confirm_password">Confirm Password *:</label><br>
+                        <input type="password" 
+                               id="confirm_password" 
+                               name="confirm_password" 
+                               required 
+                               minlength="8" 
+                               maxlength="20" 
+                               placeholder="Re-enter password">
+                    </p>
+
+                    <!-- Telephone Input -->
+                    <p>
+                        <label for="phone">Mobile Phone Number *:</label><br>
+                        <input type="tel" 
+                               id="phone" 
+                               name="phone" 
+                               placeholder="10-digit mobile number" 
+                               required 
+                               minlength="10" 
+                               maxlength="10">
+                    </p>
+
+                    <!-- Number Input -->
+                    <p>
+                        <label for="age">Age (Years) *:</label><br>
+                        <input type="number" 
+                               id="age" 
+                               name="age" 
+                               value="18" 
+                               min="16" 
+                               max="60" 
+                               required>
+                    </p>
+
+                    <!-- Date Input -->
+                    <p>
+                        <label for="dob">Date of Birth *:</label><br>
+                        <input type="date" 
+                               id="dob" 
+                               name="dob" 
+                               required>
+                    </p>
+
+                    <!-- Radio Buttons -->
+                    <p>
+                        <label>Gender *:</label><br>
+                        <input type="radio" id="gender_male" name="gender" value="Male" required>
+                        <label for="gender_male">Male</label>
+                        
+                        <input type="radio" id="gender_female" name="gender" value="Female">
+                        <label for="gender_female">Female</label>
+                        
+                        <input type="radio" id="gender_other" name="gender" value="Other">
+                        <label for="gender_other">Other</label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- Academic & Technical Profile -->
+                <fieldset>
+                    <legend><strong>Academic Information &amp; Preferences</strong></legend>
+
+                    <!-- Select / Dropdown -->
+                    <p>
+                        <label for="department">Select Department *:</label><br>
+                        <select id="department" name="department" required>
+                            <option value="">-- Select Department --</option>
+                            <option value="IT">Department of Information Technology</option>
+                            <option value="CE">Department of Computer Engineering</option>
+                            <option value="CSE">Department of Computer Science &amp; Engineering</option>
+                            <option value="EC">Department of Electronics &amp; Communication</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="semester">Current Semester *:</label><br>
+                        <select id="semester" name="semester" required>
+                            <option value="Semester 3" selected>Semester 3 (2026-27)</option>
+                            <option value="Semester 4">Semester 4</option>
+                            <option value="Semester 5">Semester 5</option>
+                        </select>
+                    </p>
+
+                    <!-- URL Input -->
+                    <p>
+                        <label for="portfolio_url">Personal Website / GitHub Profile URL:</label><br>
+                        <input type="url" 
+                               id="portfolio_url" 
+                               name="portfolio_url" 
+                               placeholder="https://github.com/username">
+                    </p>
+
+                    <!-- File Input -->
+                    <p>
+                        <label for="id_document">Upload Student ID Card / Proof (PDF, PNG, JPG) *:</label><br>
+                        <input type="file" 
+                               id="id_document" 
+                               name="id_document" 
+                               accept=".pdf, .png, .jpg, .jpeg" 
+                               required>
+                    </p>
+
+                    <!-- Checkboxes -->
+                    <p>
+                        <label>Select Technical Interests:</label><br>
+                        <input type="checkbox" id="interest_html" name="interests[]" value="HTML5" checked>
+                        <label for="interest_html">HTML5 Semantic Structure</label><br>
+
+                        <input type="checkbox" id="interest_tables" name="interests[]" value="Tables">
+                        <label for="interest_tables">Data Tables &amp; Forms</label><br>
+
+                        <input type="checkbox" id="interest_git" name="interests[]" value="Git">
+                        <label for="interest_git">Git &amp; Version Control</label>
+                    </p>
+
+                    <!-- Textarea -->
+                    <p>
+                        <label for="statement">Statement of Purpose / Bio (Max 200 characters):</label><br>
+                        <textarea id="statement" 
+                                  name="statement" 
+                                  rows="4" 
+                                  cols="50" 
+                                  maxlength="200" 
+                                  placeholder="Briefly describe your academic background..."></textarea>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- Terms & Buttons -->
+                <fieldset>
+                    <legend><strong>Confirmation</strong></legend>
+
+                    <p>
+                        <input type="checkbox" id="terms_agree" name="terms_agree" value="Yes" required>
+                        <label for="terms_agree">I declare that all information provided above is accurate and complete. *</label>
+                    </p>
+
+                    <!-- Form Buttons -->
+                    <p>
+                        <button type="submit">Submit Registration</button>
+                        <button type="reset">Reset Form Fields</button>
+                        <button type="button" onclick="alert('StudentHub Registration System V1.0')">Help / Info</button>
+                    </p>
+                </fieldset>
+
+            </form>
+        </section>
+
+        <p>Already have a StudentHub account? <a href="login.html">Login to your dashboard here</a>.</p>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
+    </footer>
+
+</body>
+</html>

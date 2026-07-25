@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Login Page - StudentHub Portal">
+    <title>StudentHub - User Login</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Header -->
+    <header>
+        <h1>User Authentication Portal</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>Access Student &amp; Faculty Accounts</small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Navigation -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="profile.html">Student Profile</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <section id="login-section">
+            <h2>Account Login Form</h2>
+            <p>Please enter your registered CHARUSAT email address and password to sign in.</p>
+
+            <!-- Lesson 6: Login Form -->
+            <form action="dashboard.html" method="post">
+
+                <!-- Hidden Input token -->
+                <input type="hidden" id="login_token" name="login_token" value="SECURE_SESSION_TOKEN_2026">
+
+                <fieldset>
+                    <legend><strong>Login Credentials</strong></legend>
+
+                    <!-- Email Input -->
+                    <p>
+                        <label for="login_email">Registered Email Address *:</label><br>
+                        <input type="email" 
+                               id="login_email" 
+                               name="email" 
+                               placeholder="e.g., student@charusat.edu.in" 
+                               required>
+                    </p>
+
+                    <!-- Password Input -->
+                    <p>
+                        <label for="login_password">Account Password *:</label><br>
+                        <input type="password" 
+                               id="login_password" 
+                               name="password" 
+                               placeholder="Enter your password" 
+                               required 
+                               minlength="8" 
+                               maxlength="20">
+                    </p>
+
+                    <!-- Checkbox Input -->
+                    <p>
+                        <input type="checkbox" id="remember_session" name="remember_session" value="1" checked>
+                        <label for="remember_session">Remember me on this browser session</label>
+                    </p>
+
+                    <!-- Buttons -->
+                    <p>
+                        <button type="submit">Log In to Dashboard</button>
+                        <button type="reset">Clear Fields</button>
+                    </p>
+
+                </fieldset>
+            </form>
+
+            <br>
+
+            <!-- Help Links -->
+            <p>Need help accessing your account?</p>
+            <ul>
+                <li>Forgot your password? Visit <a href="contact.html">Contact Support</a>.</li>
+                <li>New to StudentHub? <a href="register.html">Create a new student account</a>.</li>
+                <li>External Helpdesk: <a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">CHARUSAT IT Helpdesk</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
+    </footer>
+
+</body>
+</html>

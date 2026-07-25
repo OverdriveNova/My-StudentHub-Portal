@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Feedback Survey - Rate Portal Navigation and Submit Suggestions">
+    <title>StudentHub - Feedback Survey</title>
+</head>
+<body>
+
+    <!-- Lesson 1: Header -->
+    <header>
+        <h1>Student Feedback &amp; Portal Survey</h1>
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p><small>Help us improve StudentHub by rating portal accessibility, tables, and form usability</small></p>
+    </header>
+
+    <hr>
+
+    <!-- Lesson 3: Navigation -->
+    <nav aria-label="Main Navigation Menu">
+        <h2>Portal Quick Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <section id="feedback-form-section">
+            <h2>Student Satisfaction Survey Form</h2>
+            <p>
+                <small>Please fill out this survey form. Fields marked with <strong>*</strong> are required.</small>
+            </p>
+
+            <!-- Lesson 6: Comprehensive Feedback Form -->
+            <form action="feedback.html" method="post">
+                <input type="hidden" name="survey_id" value="SURVEY_SEM3_2026">
+
+                <fieldset>
+                    <legend><strong>Respondent Contact Information</strong></legend>
+
+                    <!-- Text input -->
+                    <p>
+                        <label for="fb_name">Full Name (Optional):</label><br>
+                        <input type="text" 
+                               id="fb_name" 
+                               name="fullname" 
+                               placeholder="e.g., Aarav Patel" 
+                               minlength="3" 
+                               maxlength="50">
+                    </p>
+
+                    <!-- Email input -->
+                    <p>
+                        <label for="fb_email">University Email Address *:</label><br>
+                        <input type="email" 
+                               id="fb_email" 
+                               name="email" 
+                               placeholder="e.g., aarav.p@charusat.edu.in" 
+                               required>
+                    </p>
+
+                    <!-- Date input -->
+                    <p>
+                        <label for="fb_date">Date of Feedback Submission *:</label><br>
+                        <input type="date" 
+                               id="fb_date" 
+                               name="feedback_date" 
+                               required>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>Portal Ratings &amp; Evaluation</strong></legend>
+
+                    <!-- Number input -->
+                    <p>
+                        <label for="overall_score">Overall Portal Satisfaction Rating (Scale 1 to 10) *:</label><br>
+                        <input type="number" 
+                               id="overall_score" 
+                               name="overall_score" 
+                               value="9" 
+                               min="1" 
+                               max="10" 
+                               required>
+                    </p>
+
+                    <!-- Radio buttons -->
+                    <p>
+                        <label>Portal Navigation &amp; Link Ease *:</label><br>
+                        <input type="radio" id="rating_exc" name="nav_ease" value="Excellent" required>
+                        <label for="rating_exc">5 - Excellent (Easy to navigate)</label><br>
+
+                        <input type="radio" id="rating_good" name="nav_ease" value="Good">
+                        <label for="rating_good">4 - Good</label><br>
+
+                        <input type="radio" id="rating_avg" name="nav_ease" value="Average">
+                        <label for="rating_avg">3 - Average</label><br>
+
+                        <input type="radio" id="rating_poor" name="nav_ease" value="Poor">
+                        <label for="rating_poor">2 or 1 - Poor</label>
+                    </p>
+
+                    <!-- Select dropdown -->
+                    <p>
+                        <label for="fb_dept">Your Academic Department *:</label><br>
+                        <select id="fb_dept" name="department" required>
+                            <option value="">-- Select Department --</option>
+                            <option value="IT" selected>Information Technology</option>
+                            <option value="CE">Computer Engineering</option>
+                            <option value="CSE">Computer Science &amp; Engineering</option>
+                            <option value="EC">Electronics &amp; Communication</option>
+                        </select>
+                    </p>
+
+                    <!-- Checkboxes -->
+                    <p>
+                        <label>Which HTML concepts were demonstrated clearly? (Select all that apply):</label><br>
+                        <input type="checkbox" id="feat_structure" name="features[]" value="Structure" checked>
+                        <label for="feat_structure">Lesson 1: Document Structure &amp; Tags</label><br>
+
+                        <input type="checkbox" id="feat_text" name="features[]" value="Formatting" checked>
+                        <label for="feat_text">Lesson 2: Headings &amp; Text Formatting</label><br>
+
+                        <input type="checkbox" id="feat_links" name="features[]" value="Links_Media" checked>
+                        <label for="feat_links">Lesson 3: Hyperlinks &amp; Media Attributes</label><br>
+
+                        <input type="checkbox" id="feat_lists" name="features[]" value="Lists" checked>
+                        <label for="feat_lists">Lesson 4: Ordered &amp; Unordered Lists</label><br>
+
+                        <input type="checkbox" id="feat_tables" name="features[]" value="Tables" checked>
+                        <label for="feat_tables">Lesson 5: Data Tables (Colspan &amp; Rowspan)</label><br>
+
+                        <input type="checkbox" id="feat_forms" name="features[]" value="Forms" checked>
+                        <label for="feat_forms">Lesson 6: Forms &amp; Input Validation Attributes</label>
+                    </p>
+
+                    <!-- Textarea -->
+                    <p>
+                        <label for="fb_comments">Additional Comments &amp; Suggestions (Max 500 characters):</label><br>
+                        <textarea id="fb_comments" 
+                                  name="comments" 
+                                  rows="6" 
+                                  cols="55" 
+                                  maxlength="500" 
+                                  placeholder="Share any suggestions or feedback for the portal..."></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Submit Feedback Survey</button>
+                        <button type="reset">Reset Survey Fields</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
+    </footer>
+
+</body>
+</html>
