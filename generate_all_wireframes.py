@@ -897,10 +897,12 @@ def main():
     
     for filename, gen_fn in generators:
         img = gen_fn()
-        filepath = os.path.join(out_dir, filename)
-        img.save(filepath, "PNG", dpi=(300, 300), optimize=True)
+        filepath_png = os.path.join(out_dir, filename)
+        filepath_jpg = os.path.join(out_dir, filename.replace('.png', '.jpg'))
+        img.save(filepath_png, "PNG", dpi=(300, 300), optimize=True)
+        img.save(filepath_jpg, "JPEG", dpi=(300, 300), quality=95)
         images_list.append((filename, img))
-        print(f"Generated {filepath}")
+        print(f"Generated {filepath_png} and {filepath_jpg}")
         
     # Also generate a master collage image showing all 11 wireframes side by side / grid!
     grid_cols = 3
@@ -929,9 +931,12 @@ def main():
         
         master_img.paste(img, (x, y))
         
-    master_path = "assets/images/studenthub_all_11_wireframes.png"
-    master_img.save(master_path, "PNG", dpi=(150, 150), optimize=True)
-    print(f"Generated Master Collage at {master_path}")
+    master_path_png = "assets/images/studenthub_all_11_wireframes.png"
+    master_path_jpg = "assets/images/studenthub_all_11_wireframes.jpg"
+    master_img.save(master_path_png, "PNG", dpi=(150, 150), optimize=True)
+    master_img.save(master_path_jpg, "JPEG", dpi=(150, 150), quality=95)
+    print(f"Generated Master Collage PNG at {master_path_png}")
+    print(f"Generated Master Collage JPEG at {master_path_jpg}")
 
 if __name__ == '__main__':
     main()

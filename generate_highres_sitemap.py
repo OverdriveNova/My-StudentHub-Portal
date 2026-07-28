@@ -101,9 +101,12 @@ def main():
                 draw.text((nx1 + 12, cy1 + 40 + j*28), f"• {dtext}", fill=c_slate_800, font=node_detail_font)
 
     # Save output
-    output_path = "assets/images/studenthub_sitemap.png"
-    img.save(output_path, "PNG", dpi=(300, 300), optimize=True)
-    print(f"Successfully generated standalone high-resolution sitemap PNG at {os.path.abspath(output_path)}")
+    output_path_png = "assets/images/studenthub_sitemap.png"
+    output_path_jpg = "assets/images/studenthub_sitemap.jpg"
+    img.save(output_path_png, "PNG", dpi=(300, 300), optimize=True)
+    img.save(output_path_jpg, "JPEG", dpi=(300, 300), quality=95)
+    print(f"Successfully generated standalone high-resolution sitemap PNG at {os.path.abspath(output_path_png)}")
+    print(f"Successfully generated standalone high-resolution sitemap JPEG at {os.path.abspath(output_path_jpg)}")
 
 if __name__ == '__main__':
     main()
