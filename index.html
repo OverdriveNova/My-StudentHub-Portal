@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="StudentHub - Central Campus Portal for CHARUSAT Students">
     <title>StudentHub - Home Page</title>
+    
 </head>
 <body>
+
+    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Lesson 1: Document Structure & Header -->
     <header>
@@ -37,6 +41,15 @@
 
     <hr>
 
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
     <!-- Lesson 6: Quick Portal Search Form -->
     <section>
         <h2>Portal Quick Search</h2>
@@ -53,7 +66,7 @@
     <hr>
 
     <!-- Lesson 2: Headings, Text Formatting, Elements -->
-    <main>
+    <main id="main-content" tabindex="-1">
         <section id="welcome-section">
             <h2>Welcome to StudentHub</h2>
             <p>
@@ -133,14 +146,14 @@
         <hr>
 
         <!-- Lesson 3: External Links with Security Attributes -->
-        <section id="external-resources">
+        <aside id="external-resources">
             <h2>External University Links</h2>
             <p>
                 Visit the official website: 
                 <a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">CHARUSAT Official Portal</a> 
                 <small>(Opens in a new tab with <code>rel="noopener noreferrer"</code> for link security)</small>.
             </p>
-        </section>
+        </aside>
     </main>
 
     <hr>

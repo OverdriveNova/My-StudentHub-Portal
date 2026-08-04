@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Support - Campus Location, Department Directory Table, and Inquiry Form">
     <title>StudentHub - Contact Support</title>
+    
 </head>
 <body>
+
+    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Lesson 1: Header -->
     <header>
@@ -37,9 +41,19 @@
 
     <hr>
 
-    <main>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="contact.html" aria-current="page">Contact Support</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main id="main-content" tabindex="-1">
         <!-- Lesson 1 & 2: Address Element & Formatting -->
-        <section id="location-info">
+        <aside id="location-info">
             <h2>Campus Location Address</h2>
             <address>
                 <strong>Devang Patel Institute of Advance Technology &amp; Research (DEPSTAR)</strong><br>
@@ -56,7 +70,7 @@
                 <a href="https://maps.google.com/?q=CHARUSAT+University" target="_blank" rel="noopener noreferrer">CHARUSAT Google Maps Location</a> 
                 <small>(Opens in a external tab)</small>.
             </p>
-        </section>
+        </aside>
 
         <hr>
 

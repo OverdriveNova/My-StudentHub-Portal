@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Student Feedback Survey - Rate Portal Navigation and Submit Suggestions">
     <title>StudentHub - Feedback Survey</title>
+    
 </head>
 <body>
+
+    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Lesson 1: Header -->
     <header>
@@ -37,9 +41,25 @@
 
     <hr>
 
-    <main>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="feedback.html" aria-current="page">Feedback Survey</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main id="main-content" tabindex="-1">
         <section id="feedback-form-section">
             <h2>Student Satisfaction Survey Form</h2>
+            
+            <aside id="feedback-privacy-notice">
+                <h3>Feedback Confidentiality Notice</h3>
+                <p>All feedback reports and satisfaction ratings are analyzed anonymously by the Quality Assurance Committee to enhance the StudentHub Portal functionality. Your contact details are stored securely.</p>
+            </aside>
+
             <p>
                 <small>Please fill out this survey form. Fields marked with <strong>*</strong> are required.</small>
             </p>

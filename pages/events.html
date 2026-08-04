@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Campus Events Listing - Technical Hackathons, Workshops, and Sports Events">
     <title>StudentHub - Campus Events</title>
+    
 </head>
 <body>
+
+    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Lesson 1: Header -->
     <header>
@@ -37,7 +41,17 @@
 
     <hr>
 
-    <main>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="events.html" aria-current="page">Campus Events</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main id="main-content" tabindex="-1">
         <!-- Lesson 6: Event Search & Filter Form -->
         <section id="event-filter">
             <h2>Search &amp; Filter Events</h2>
@@ -119,6 +133,13 @@
                 </form>
             </article>
         </section>
+
+        <hr>
+
+        <aside id="events-guidelines">
+            <h3>Event Registration Guidelines</h3>
+            <p>Make sure you register at least 24 hours prior to the event starting slot. Active enrolled status is required for all technical events. Seating is on a first-come, first-served basis.</p>
+        </aside>
 
         <hr>
 

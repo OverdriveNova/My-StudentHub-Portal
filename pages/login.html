@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="User Login Page - StudentHub Portal">
     <title>StudentHub - User Login</title>
+    
 </head>
 <body>
+
+    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Lesson 1: Header -->
     <header>
@@ -37,7 +41,17 @@
 
     <hr>
 
-    <main>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="login.html" aria-current="page">User Login</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main id="main-content" tabindex="-1">
         <section id="login-section">
             <h2>Account Login Form</h2>
             <p>Please enter your registered CHARUSAT email address and password to sign in.</p>
@@ -91,12 +105,14 @@
             <br>
 
             <!-- Help Links -->
-            <p>Need help accessing your account?</p>
-            <ul>
-                <li>Forgot your password? Visit <a href="contact.html">Contact Support</a>.</li>
-                <li>New to StudentHub? <a href="register.html">Create a new student account</a>.</li>
-                <li>External Helpdesk: <a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">CHARUSAT IT Helpdesk</a></li>
-            </ul>
+            <aside id="login-support">
+                <h3>Need help accessing your account?</h3>
+                <ul>
+                    <li>Forgot your password? Visit <a href="contact.html">Contact Support</a>.</li>
+                    <li>New to StudentHub? <a href="register.html">Create a new student account</a>.</li>
+                    <li>External Helpdesk: <a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">CHARUSAT IT Helpdesk</a></li>
+                </ul>
+            </aside>
         </section>
     </main>
 

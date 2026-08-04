@@ -122,3 +122,42 @@ Web Development/
 │
 └── practice/                            # Practice folder (Left alone)
 ```
+
+---
+
+## 6. Practical 2 Analysis & Questions
+
+### Q1: Are semantic tags such as `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, and `<footer>` used properly?
+Yes. The tags are applied following their semantic definitions:
+* `<header>` wraps the introductory content (site name, course title, and institute logo).
+* `<nav>` is used exclusively for primary navigation blocks and breadcrumbs.
+* `<main>` holds the primary, unique content of each page, marking it for screen readers and keyboard skip links.
+* `<section>` groups related thematic content block elements.
+* `<article>` wraps self-contained content modules (like news announcements or specific event entries).
+* `<aside>` represents tangential or supplementary information (such as registration notices, map widgets, and support logs).
+* `<footer>` represents page metadata, copyrights, and return-to-top links.
+
+### Q2: Are form labels, headings, image alt text, and navigation links accessible?
+Yes. Accessibility features implemented include:
+1. **Explicit Form Labels:** Every input control is wrapped in or mapped directly to a `<label>` element using matching `for` and `id` properties to support screen reader text-to-speech.
+2. **Logical Headings:** Headings follow a strict descending hierarchy (e.g. `<h1>` -> `<h2>` -> `<h3>`) with exactly one `<h1>` per page.
+3. **Descriptive Alt Text:** All images contain informative descriptive attributes (e.g. `alt="Web Innovation Hackathon Banner"`).
+4. **Skip-to-Content & Focus Ring:** Screen readers and keyboard-only users can jump directly to the unique body contents using the "Skip to main content" shortcut. Default browser outline styles are preserved for keyboard focus visual feedback.
+5. **No CSS Elements:** The website structure is built strictly with HTML5 semantic guidelines as per Practical 2, without styling sheets.
+
+### Q3: Is the page structure consistent across all pages?
+Yes, all 11 pages share the exact same structural template (Header -> Navigation -> Breadcrumbs -> Main Content containing sections/asides -> Footer), ensuring a highly predictable and easy-to-use user experience.
+
+---
+
+## 7. Practical 2 Accessibility Checklist
+
+- [x] **Skip-to-Content:** A skip-to-content link exists as the very first child of `<body>` on all 11 pages.
+- [x] **Accessible Main Target:** Every `<main>` container has `id="main-content"` and `tabindex="-1"` to properly capture screen reader focus.
+- [x] **Breadcrumb Navigation:** Breadcrumbs are added just below the main navigation lists to support intermediate site tracking.
+- [x] **Keyboard-Friendly Outlines:** Focus indicators are preserved via standard browser outline defaults to maintain accessibility.
+- [x] **Semantic Tags:** A complete set of semantic tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`) is used correctly across all pages.
+- [x] **Explicit Form Labels:** All input, select, and textarea fields are explicitly bound to corresponding labels.
+- [x] **Language Attribute:** Every document contains `<html lang="en">` to set the screen reader language dictionary.
+- [x] **Descriptive Alt Attributes:** All site images contain readable, contextual alternative text descriptions.
+- [x] **SEO Meta Descriptions:** Proper page titles and specific search descriptions are set in every document head.

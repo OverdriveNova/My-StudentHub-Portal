@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Admin Control Dashboard - System Monitoring and Audit Logs">
     <title>StudentHub - Admin Dashboard</title>
+    
 </head>
 <body>
+
+    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Lesson 1: Header -->
     <header>
@@ -37,7 +41,17 @@
 
     <hr>
 
-    <main>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="admin.html" aria-current="page">Admin Portal</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main id="main-content" tabindex="-1">
         <!-- Lesson 6: Admin Action Form -->
         <section id="admin-actions">
             <h2>Administrative Quick Actions &amp; User Search</h2>
@@ -133,7 +147,7 @@
         <hr>
 
         <!-- Lesson 4: Ordered List with start attribute for audit trail -->
-        <section id="audit-trail">
+        <aside id="audit-trail">
             <h2>Recent Security &amp; Administrative Audit Logs</h2>
 
             <ol type="1" start="101">
@@ -147,7 +161,7 @@
                     <strong>[Log #103]</strong> New campus event <mark>Web Innovation Hackathon 2026</mark> added to <a href="events.html">Events Page</a> schedule table.
                 </li>
             </ol>
-        </section>
+        </aside>
     </main>
 
     <hr>

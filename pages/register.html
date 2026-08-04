@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Student Registration Form - Demonstrating Lesson 6 HTML Form Inputs and Attributes">
     <title>StudentHub - Registration</title>
+    
 </head>
 <body>
+
+    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Lesson 1: Header -->
     <header>
@@ -37,7 +41,17 @@
 
     <hr>
 
-    <main>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="register.html" aria-current="page">Student Registration</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main id="main-content" tabindex="-1">
         <section id="registration-section">
             <h2>New Student Registration Form</h2>
             <p>
@@ -255,7 +269,11 @@
             </form>
         </section>
 
-        <p>Already have a StudentHub account? <a href="login.html">Login to your dashboard here</a>.</p>
+        <aside id="register-info">
+            <h3>Registration Support</h3>
+            <p>Already have a StudentHub account? <a href="login.html">Login to your dashboard here</a>.</p>
+            <p>If you encounter any issues during registration (such as invalid student ID upload or duplicate emails), please reach out to the <a href="contact.html">IT Helpdesk</a> immediately.</p>
+        </aside>
     </main>
 
     <hr>

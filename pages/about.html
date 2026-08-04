@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About StudentHub - Vision, Department Details, and Academic Syllabus Table">
     <title>StudentHub - About Portal</title>
+    
 </head>
 <body>
+
+    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Lesson 1: Header -->
     <header>
@@ -37,7 +41,17 @@
 
     <hr>
 
-    <main>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About Us</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main id="main-content" tabindex="-1">
         <!-- Lesson 2: Headings & Text Formatting -->
         <section id="vision">
             <h2>Portal Vision &amp; Purpose</h2>
@@ -163,14 +177,14 @@
         <hr>
 
         <!-- Lesson 3: External Links -->
-        <section id="external">
+        <aside id="external">
             <h2>Department Contact &amp; Links</h2>
             <p>
                 For official faculty guidelines, visit 
                 <a href="https://www.charusat.ac.in/depstar" target="_blank" rel="noopener noreferrer">CHARUSAT DEPSTAR Portal</a> 
                 or send an email to <a href="mailto:info@charusat.ac.in">info@charusat.ac.in</a>.
             </p>
-        </section>
+        </aside>
     </main>
 
     <hr>
