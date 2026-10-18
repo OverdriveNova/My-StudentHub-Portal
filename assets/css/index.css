@@ -433,7 +433,11 @@ input[type="radio"], input[type="checkbox"] {
     cursor: pointer;
 }
 
-button, input[type="submit"], input[type="reset"], input[type="button"] {
+.btn, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     background-color: var(--primary-color);
     color: #ffffff;
     font-weight: 600;
@@ -446,8 +450,9 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
     box-shadow: var(--shadow-sm);
 }
 
-button:hover, input[type="submit"]:hover {
+.btn:hover, button:hover, input[type="submit"]:hover {
     background-color: var(--primary-light);
+    color: #ffffff;
     box-shadow: var(--shadow-md);
     transform: translateY(-1px);
 }
