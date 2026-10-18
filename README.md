@@ -42,41 +42,27 @@ Web Development/
 │   │   ├── registration-validation.js  # Form validation with regex + strength meter
 │   │   └── fetch-data.js               # Fetch API: events, students, FAQs from JSON
 │   ├── data/
-│   │   ├── events.json                 # Campus events dataset (10 records)
-│   │   ├── faqs.json                   # FAQ dataset (accordion data)
-│   │   └── students.json               # Student records dataset
+│   │   ├── events.json                 # Campus events dataset (15 records)
+│   │   ├── faqs.json                   # FAQ dataset (15 items)
+│   │   └── students.json               # Student records dataset (15 records)
 │   └── images/
-│       ├── charusat_logo.png           # University logo
-│       ├── studenthub_sitemap.png      # Sitemap diagram (Practical 1)
-│       ├── studenthub_all_11_wireframes.png  # All wireframes sheet (Practical 1)
-│       ├── Background img/             # Campus banner image
-│       ├── wireframes/                 # Individual page wireframes
+│       ├── Background_Img/             # Campus banner image & profile avatar
 │       └── screenshots/               # Multi-device responsive screenshots
 │
-├── docs/                               # Reference documents
-│   ├── Practical_List_ITUE203_WDF_2026_27.pdf
-│   ├── WORD FILE FORMAT ONLY.docx
-│   └── learning reference/
+├── backend/                            # PHP Server-Side Practicals (7–9)
+│   ├── README.md                       # Setup guide for PHP practicals
+│   ├── Practical7/
+│   │   └── index.php                   # PHP form processing, CSRF, validation, CSV export
+│   ├── Practical8/
+│   │   ├── db.php                      # Shared MySQL connection (MySQLi & PDO)
+│   │   ├── index.php                   # Database dashboard, schema viewer, SQL joins
+│   │   ├── studenthub_schema.sql       # Database DDL schema (5 tables)
+│   │   └── studenthub_seed.sql         # Seed data (20+ students, events, audit logs)
+│   └── Practical9/
+│       └── index.php                   # Secure registration, Bcrypt hashing, PDO transactions
 │
-├── Practical File/                     # Submitted lab reports (.docx and .pdf)
-│   ├── Practical-1-25DCS058.docx / .pdf
-│   ├── Practical-2-25DCS058.docx / .pdf
-│   ├── Practical-3-25DCS058.docx / .pdf
-│   ├── Practical-4-25DCS058.docx
-│   ├── Practical-5-25DCS058.docx
-│   ├── Practical-6-25DCS058.docx
-│   ├── Practical-7-25DCS058.docx
-│   ├── Practical-8-25DCS058.docx
-│   ├── Practical-9-25DCS058.docx
-│   ├── Practical-4,5,6-25DCS058.pdf
-│   ├── Practical-1-2-3-Complete-Lab-Report-25DCS058.docx
-│   ├── Practical-4-5-6-Complete-Lab-Report-25DCS058.docx
-│   └── Practical-1-to-6-Master-Lab-Report-25DCS058.docx
-│
-└── Practical CIE 1/                    # CIE-1 Exam submission
-    ├── CollegeClubs.html               # CIE exam HTML page
-    ├── 25DCS058.docx / .pdf
-    └── IMAGES/
+└── docs/                               # Reference documents
+    └── learning reference/
 
 XAMPP Web Server Deployment (C:\xampp\htdocs\):
 │
