@@ -6,22 +6,27 @@
     <meta name="description" content="About StudentHub - Vision, Department Details, and Academic Syllabus Table">
     <title>StudentHub - About Portal</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>About StudentHub Portal</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>Devang Patel Institute of Advance Technology &amp; Research | Department of Information Technology</small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +46,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -52,7 +57,7 @@
     <hr>
 
     <main id="main-content" tabindex="-1">
-        <!-- Lesson 2: Headings & Text Formatting -->
+        
         <section id="vision">
             <h2>Portal Vision &amp; Purpose</h2>
             <p>
@@ -65,7 +70,7 @@
 
         <hr>
 
-        <!-- Lesson 4: Ordered Lists with attributes (type, start, reversed) & Nested Lists -->
+        
         <section id="objectives">
             <h2>Course Learning Roadmap</h2>
             <h3>Primary Learning Modules (Numeric Order)</h3>
@@ -107,7 +112,7 @@
 
         <hr>
 
-        <!-- Lesson 5: Comprehensive Table demonstrating thead, tbody, tfoot, th, td, colspan, rowspan -->
+        
         <section id="syllabus-table">
             <h2>Semester 3 Course Structure &amp; Assessment Table</h2>
 
@@ -176,7 +181,7 @@
 
         <hr>
 
-        <!-- Lesson 3: External Links -->
+        
         <aside id="external">
             <h2>Department Contact &amp; Links</h2>
             <p>
@@ -193,5 +198,11 @@
         <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

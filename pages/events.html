@@ -6,22 +6,28 @@
     <meta name="description" content="Campus Events Listing - Technical Hackathons, Workshops, and Sports Events">
     <title>StudentHub - Campus Events</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>Campus Events &amp; Activities</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>Discover and register for upcoming university hackathons, seminars, and sports meets</small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+            <button id="openModal" class="theme-btn" type="button">ℹ️ Event Modal</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +47,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -52,86 +58,50 @@
     <hr>
 
     <main id="main-content" tabindex="-1">
-        <!-- Lesson 6: Event Search & Filter Form -->
+        
         <section id="event-filter">
-            <h2>Search &amp; Filter Events</h2>
-            <form action="events.html" method="get">
+            <h2>Search &amp; Dynamic Filter Events (Fetch API)</h2>
+            <form onsubmit="event.preventDefault();">
                 <p>
-                    <label for="event-keyword">Event Keyword:</label>
-                    <input type="search" id="event-keyword" name="keyword" placeholder="e.g., Hackathon, Sports...">
+                    <label for="searchBox">Event Search / Keyword:</label>
+                    <input type="search" id="searchBox" name="keyword" placeholder="Search title, category, venue...">
                     
-                    <label for="event-category">Category:</label>
-                    <select id="event-category" name="category">
-                        <option value="">-- All Categories --</option>
-                        <option value="technical">Technical Competitions</option>
-                        <option value="workshop">Academic Workshops</option>
-                        <option value="sports">Sports &amp; Fitness</option>
+                    <label for="statusFilter">Status Filter:</label>
+                    <select id="statusFilter" name="status">
+                        <option value="">-- All Statuses --</option>
+                        <option value="Open">Open</option>
+                        <option value="Limited Seats">Limited Seats</option>
+                        <option value="Coming Soon">Coming Soon</option>
                     </select>
 
-                    <label for="event-date">Start Date From:</label>
-                    <input type="date" id="event-date" name="from_date">
+                    <label for="categoryFilter">Category Filter:</label>
+                    <select id="categoryFilter" name="category">
+                        <option value="">-- All Categories --</option>
+                        <option value="Technical">Technical</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="Social">Social</option>
+                        <option value="Educational">Educational</option>
+                        <option value="Academic">Academic</option>
+                    </select>
 
-                    <button type="submit">Filter Events</button>
-                    <button type="reset">Clear Filter</button>
+                    <button type="button" id="sortButton" class="btn-secondary">Sort by Date ⬆</button>
                 </p>
             </form>
         </section>
 
         <hr>
 
-        <!-- Lesson 2 & 3: Events List with Images and Formatting -->
+        
         <section id="upcoming-events">
-            <h2>Upcoming Campus Events</h2>
+            <h2>Upcoming Campus Events (Fetched Dynamically from events.json)</h2>
 
-            <article>
-                <h3>1. Web Innovation Hackathon 2026</h3>
-                <p>
-                    <!-- Lesson 3: Image with relative/absolute paths & security/privacy attributes -->
-                    <img src="https://via.placeholder.com/400x150.png?text=Web+Innovation+Hackathon+2026" 
-                         alt="Web Innovation Hackathon Banner" 
-                         width="400" 
-                         height="150" 
-                         loading="lazy" 
-                         referrerpolicy="no-referrer">
-                </p>
-                <p><strong>Category:</strong> <mark>Technical Hackathon</mark></p>
-                <p><strong>Event Dates:</strong> August 12 - August 14, 2026 (3 Days)</p>
-                <p><strong>Venue:</strong> IT Seminar Hall, DEPSTAR CHARUSAT</p>
-                <p>
-                    Build accessible full-stack web applications using HTML5 semantic elements, data tables, and structured forms. Cash prizes for top 3 teams!
-                </p>
-                
-                <!-- Lesson 6: Individual Event Registration Button Form -->
-                <form action="register.html" method="get">
-                    <input type="hidden" name="event_id" value="EVT_HACKATHON_2026">
-                    <button type="submit">Register for Web Hackathon</button>
-                </form>
-            </article>
+            <div id="eventList">
+                <p class="loading-state">⏳ Loading upcoming campus events...</p>
+            </div>
 
-            <br><hr><br>
-
-            <article>
-                <h3>2. Annual Sports Meet 2026</h3>
-                <p>
-                    <img src="https://via.placeholder.com/400x150.png?text=CHARUSAT+Annual+Sports+Meet" 
-                         alt="CHARUSAT Sports Tournament Banner" 
-                         width="400" 
-                         height="150" 
-                         loading="lazy" 
-                         referrerpolicy="no-referrer">
-                </p>
-                <p><strong>Category:</strong> <em>Sports &amp; Fitness</em></p>
-                <p><strong>Event Date:</strong> August 25, 2026</p>
-                <p><strong>Venue:</strong> University Sports Complex &amp; Athletics Ground</p>
-                <p>
-                    Inter-departmental chess, table tennis, badminton, and track events. Open to all registered CHARUSAT students.
-                </p>
-
-                <form action="register.html" method="get">
-                    <input type="hidden" name="event_id" value="EVT_SPORTS_2026">
-                    <button type="submit">Register for Sports Meet</button>
-                </form>
-            </article>
+            
+            <div id="pagination" class="pagination-container"></div>
         </section>
 
         <hr>
@@ -143,7 +113,7 @@
 
         <hr>
 
-        <!-- Lesson 5: Schedule Table with Rowspan and Colspan -->
+        
         <section id="event-schedule-table">
             <h2>Detailed Events Timetable &amp; Venue Capacity</h2>
 
@@ -204,5 +174,30 @@
         <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <div id="eventModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Event Details</h3>
+                <button id="closeModal" class="modal-close" type="button" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Date:</strong> <span id="modalDate"></span></p>
+                <p><strong>Venue:</strong> <span id="modalVenue"></span></p>
+                <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+                <p id="modalDescription">Detailed information about campus activities and registration instructions.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="closeEventModal()" class="btn-secondary">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

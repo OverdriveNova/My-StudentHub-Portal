@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="StudentHub - Central Campus Portal for CHARUSAT Students">
     <title>StudentHub - Home Page</title>
-    
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Document Structure & Header -->
+    <div id="notificationBanner" class="notification-banner">
+        <span>📢 <strong>Notice:</strong> Mid-Semester Examination Schedule &amp; Hackathon 2026 Registrations are now LIVE!</span>
+        <button id="closeNotification" class="close-banner-btn" aria-label="Close notification">&times;</button>
+    </div>
+
     <header>
         <h1>StudentHub Central Portal</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>Devang Patel Institute of Advance Technology &amp; Research | Course: <em>ITUE203 - Web Development Frameworks</em></small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+            <button id="openModal" class="theme-btn" type="button">ℹ️ Event Modal</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Internal Navigation Menu -->
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +48,6 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="index.html" aria-current="page">Home</a></li>
@@ -50,7 +56,6 @@
 
     <hr>
 
-    <!-- Lesson 6: Quick Portal Search Form -->
     <section>
         <h2>Portal Quick Search</h2>
         <form action="index.html" method="get">
@@ -65,7 +70,6 @@
 
     <hr>
 
-    <!-- Lesson 2: Headings, Text Formatting, Elements -->
     <main id="main-content" tabindex="-1">
         <section id="welcome-section">
             <h2>Welcome to StudentHub</h2>
@@ -76,9 +80,8 @@
                 <mark>Important Notice:</mark> Registration for the 2026<sup>th</sup> Academic Cycle (Semester 3) is currently <strong>ACTIVE</strong>.
             </p>
 
-            <!-- Lesson 3: Image with relative/absolute paths & security/privacy attributes -->
             <p>
-                <img src="https://via.placeholder.com/600x200.png?text=CHARUSAT+StudentHub+Campus+Portal" 
+                <img src="./assets/images/Background_Img/image.png" 
                      alt="CHARUSAT Campus Banner Placeholder" 
                      width="600" 
                      height="200" 
@@ -118,7 +121,6 @@
 
         <hr>
 
-        <!-- Lesson 4: Unordered and Nested Lists -->
         <section id="portal-highlights">
             <h2>Key Portal Services</h2>
             <ul>
@@ -145,7 +147,6 @@
 
         <hr>
 
-        <!-- Lesson 3: External Links with Security Attributes -->
         <aside id="external-resources">
             <h2>External University Links</h2>
             <p>
@@ -158,11 +159,32 @@
 
     <hr>
 
-    <!-- Lesson 1 & 2: Footer & Contact Info -->
     <footer>
         <p><small>&copy; 2026 StudentHub Portal | CHARUSAT DEPSTAR - ITUE203</small></p>
         <p><small><a href="#welcome-section">Back to Top of Page</a></small></p>
     </footer>
+
+    <div id="eventModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Event Information</h3>
+                <button id="closeModal" class="modal-close" type="button" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Date:</strong> <span id="modalDate">August 15, 2026</span></p>
+                <p><strong>Venue:</strong> <span id="modalVenue">Seminar Hall A</span></p>
+                <p><strong>Category:</strong> <span id="modalCategory">Technical</span></p>
+                <p id="modalDescription">Detailed information about campus activities and registration instructions.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="closeEventModal()" class="btn-secondary">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/theme-nav.js"></script>
+    <script src="assets/js/registration-validation.js"></script>
+    <script src="assets/js/fetch-data.js"></script>
 
 </body>
 </html>

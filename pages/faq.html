@@ -6,22 +6,27 @@
     <meta name="description" content="Frequently Asked Questions (FAQ) - StudentHub Campus Portal">
     <title>StudentHub - Frequently Asked Questions</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>Frequently Asked Questions (FAQ)</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>Find answers to common student registration, event, and academic queries</small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +46,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -51,101 +56,26 @@
 
     <hr>
 
-    <!-- Lesson 6: FAQ Search Form -->
+    
     <section id="faq-search-section">
-        <h2>Search FAQ Topics</h2>
-        <form action="faq.html" method="get">
+        <h2>Search FAQ Topics (Interactive Accordion)</h2>
+        <form onsubmit="event.preventDefault();">
             <p>
-                <label for="faq-query">Search Question or Topic:</label>
-                <input type="search" id="faq-query" name="faq_query" placeholder="e.g., registration, password, events..." required minlength="2">
-                <button type="submit">Search FAQ</button>
-                <button type="reset">Clear</button>
+                <label for="faqSearch">Search Question or Topic:</label>
+                <input type="search" id="faqSearch" name="faq_query" placeholder="e.g., registration, password, events..." minlength="2">
             </p>
         </form>
     </section>
 
     <hr>
 
-    <!-- Lesson 3: Internal Anchor Jump Links -->
-    <aside id="faq-categories">
-        <h2>FAQ Categories</h2>
-        <p>Quick Jump: 
-            <a href="#general-faq">General Questions</a> | 
-            <a href="#registration-faq">Registration &amp; Login</a> | 
-            <a href="#events-faq">Campus Events</a>
-        </p>
-    </aside>
-
-    <hr>
-
     <main id="main-content" tabindex="-1">
-        <!-- Lesson 2 & 4: General FAQ with Lists and Formatting -->
-        <section id="general-faq">
-            <h2>General Questions</h2>
-
-            <article>
-                <h3>Q1: What is the primary purpose of StudentHub?</h3>
-                <p>
-                    StudentHub is an academic portal designed for <strong>CHARUSAT DEPSTAR</strong> students enrolled in <em>Web Development Frameworks (ITUE203)</em>. It allows students to manage profiles, view course tables, and register for campus events.
-                </p>
-            </article>
-
-            <article>
-                <h3>Q2: Which web browsers support StudentHub?</h3>
-                <p>
-                    StudentHub uses standard HTML5 markup elements and works across all modern web browsers including:
-                </p>
-                <ul>
-                    <li>Google Chrome (Latest)</li>
-                    <li>Mozilla Firefox</li>
-                    <li>Microsoft Edge</li>
-                    <li>Apple Safari</li>
-                </ul>
-            </article>
-        </section>
-
-        <hr>
-
-        <!-- Lesson 2 & 4: Registration FAQ with Nested Ordered List -->
-        <section id="registration-faq">
-            <h2>Registration &amp; Account Login</h2>
-
-            <article>
-                <h3>Q3: How do I complete the Student Registration process?</h3>
-                <p>Follow these numbered steps to register a new account:</p>
-                <ol type="1">
-                    <li>Navigate to the <a href="register.html">Student Registration Form</a> page.</li>
-                    <li>Fill in mandatory fields marked with an asterisk (*):
-                        <ul>
-                            <li>Full Name, Email Address, Phone Number</li>
-                            <li>Password &amp; Confirm Password</li>
-                            <li>Department &amp; Current Semester</li>
-                        </ul>
-                    </li>
-                    <li>Upload your Student ID Card proof file (PDF, PNG, or JPG format).</li>
-                    <li>Check the declaration box and click <strong>Submit Registration</strong>.</li>
-                </ol>
-            </article>
-
-            <article>
-                <h3>Q4: What should I do if I forget my account password?</h3>
-                <p>
-                    You can reset your password or contact the system administrator by submitting an inquiry on the <a href="contact.html">Contact Support Page</a>.
-                </p>
-            </article>
-        </section>
-
-        <hr>
-
-        <section id="events-faq">
-            <h2>Campus Events FAQ</h2>
-
-            <article>
-                <h3>Q5: How do I register for the Web Innovation Hackathon?</h3>
-                <p>
-                    Visit the <a href="events.html">Campus Events Page</a>, locate the Web Innovation Hackathon event article, review the schedule table, and click the registration button.
-                </p>
-            </article>
+        
+        <section id="dynamic-faq-section">
+            <h2>Frequently Asked Questions (Fetched from faqs.json)</h2>
+            <div id="faqList">
+                <p class="loading-state">⏳ Loading FAQs...</p>
+            </div>
         </section>
     </main>
 
@@ -155,5 +85,11 @@
         <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

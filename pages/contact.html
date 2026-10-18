@@ -6,22 +6,27 @@
     <meta name="description" content="Contact Support - Campus Location, Department Directory Table, and Inquiry Form">
     <title>StudentHub - Contact Support</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>Campus Support &amp; Contact Directory</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>Get in touch with administrative offices, department faculties, and IT helpdesk</small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +46,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -52,7 +57,7 @@
     <hr>
 
     <main id="main-content" tabindex="-1">
-        <!-- Lesson 1 & 2: Address Element & Formatting -->
+        
         <aside id="location-info">
             <h2>Campus Location Address</h2>
             <address>
@@ -65,7 +70,7 @@
             </address>
 
             <p>
-                <!-- Lesson 3: External Map Link -->
+                
                 Visit Map Location: 
                 <a href="https://maps.google.com/?q=CHARUSAT+University" target="_blank" rel="noopener noreferrer">CHARUSAT Google Maps Location</a> 
                 <small>(Opens in a external tab)</small>.
@@ -74,7 +79,7 @@
 
         <hr>
 
-        <!-- Lesson 5: Department Contacts Directory Table -->
+        
         <section id="directory-table">
             <h2>Department Support Directory</h2>
 
@@ -122,7 +127,7 @@
 
         <hr>
 
-        <!-- Lesson 6: Inquiry Form with Form Validation -->
+        
         <section id="inquiry-form-section">
             <h2>Send Support Inquiry Message</h2>
 
@@ -207,5 +212,11 @@
         <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Patel",
+    "enrollment": "STU001",
+    "course": "B.Tech CSE",
+    "year": "First Year",
+    "email": "aarav.patel@charusat.edu.in",
+    "mobile": "9876543210",
+    "cgpa": "8.6",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "name": "Riya Shah",
+    "enrollment": "STU002",
+    "course": "B.Tech IT",
+    "year": "Second Year",
+    "email": "riya.shah@charusat.edu.in",
+    "mobile": "9876543211",
+    "cgpa": "8.9",
+    "status": "Active"
+  },
+  {
+    "id": 3,
+    "name": "Krish Mehta",
+    "enrollment": "STU003",
+    "course": "B.Tech CE",
+    "year": "Third Year",
+    "email": "krish.mehta@charusat.edu.in",
+    "mobile": "9876543212",
+    "cgpa": "8.0",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "name": "Ananya Patel",
+    "enrollment": "STU004",
+    "course": "B.Tech CSE",
+    "year": "Fourth Year",
+    "email": "ananya.patel@charusat.edu.in",
+    "mobile": "9876543213",
+    "cgpa": "9.0",
+    "status": "Active"
+  },
+  {
+    "id": 5,
+    "name": "Dhruv Shah",
+    "enrollment": "STU005",
+    "course": "B.Tech IT",
+    "year": "First Year",
+    "email": "dhruv.shah@charusat.edu.in",
+    "mobile": "9876543214",
+    "cgpa": "9.5",
+    "status": "Active"
+  },
+  {
+    "id": 6,
+    "name": "Ishita Mehta",
+    "enrollment": "STU006",
+    "course": "B.Tech CE",
+    "year": "Second Year",
+    "email": "ishita.mehta@charusat.edu.in",
+    "mobile": "9876543215",
+    "cgpa": "6.7",
+    "status": "Inactive"
+  },
+  {
+    "id": 7,
+    "name": "Yash Patel",
+    "enrollment": "STU007",
+    "course": "B.Tech CSE",
+    "year": "Third Year",
+    "email": "yash.patel@charusat.edu.in",
+    "mobile": "9876543216",
+    "cgpa": "7.9",
+    "status": "Active"
+  },
+  {
+    "id": 8,
+    "name": "Neha Shah",
+    "enrollment": "STU008",
+    "course": "B.Tech IT",
+    "year": "Fourth Year",
+    "email": "neha.shah@charusat.edu.in",
+    "mobile": "9876543217",
+    "cgpa": "8.8",
+    "status": "Active"
+  },
+  {
+    "id": 9,
+    "name": "Dev Mehta",
+    "enrollment": "STU009",
+    "course": "B.Tech CE",
+    "year": "First Year",
+    "email": "dev.mehta@charusat.edu.in",
+    "mobile": "9876543218",
+    "cgpa": "7.6",
+    "status": "Active"
+  },
+  {
+    "id": 10,
+    "name": "Mira Patel",
+    "enrollment": "STU010",
+    "course": "B.Tech CSE",
+    "year": "Second Year",
+    "email": "mira.patel@charusat.edu.in",
+    "mobile": "9876543219",
+    "cgpa": "8.4",
+    "status": "Active"
+  },
+  {
+    "id": 11,
+    "name": "Rudra Joshi",
+    "enrollment": "25DCS058",
+    "course": "B.Tech CSE",
+    "year": "Second Year",
+    "email": "25dcs058@charusat.edu.in",
+    "mobile": "9898989898",
+    "cgpa": "9.4",
+    "status": "Active"
+  },
+  {
+    "id": 12,
+    "name": "Parth Trivedi",
+    "enrollment": "25DCS070",
+    "course": "B.Tech CSE",
+    "year": "Second Year",
+    "email": "25dcs070@charusat.edu.in",
+    "mobile": "9797979797",
+    "cgpa": "9.1",
+    "status": "Active"
+  },
+  {
+    "id": 13,
+    "name": "Kavya Desai",
+    "enrollment": "STU013",
+    "course": "B.Tech IT",
+    "year": "Third Year",
+    "email": "kavya.desai@charusat.edu.in",
+    "mobile": "9876543222",
+    "cgpa": "8.2",
+    "status": "Active"
+  },
+  {
+    "id": 14,
+    "name": "Siddharth Verma",
+    "enrollment": "STU014",
+    "course": "B.Tech EC",
+    "year": "Fourth Year",
+    "email": "siddharth.v@charusat.edu.in",
+    "mobile": "9876543223",
+    "cgpa": "7.8",
+    "status": "Active"
+  },
+  {
+    "id": 15,
+    "name": "Tanya Sharma",
+    "enrollment": "STU015",
+    "course": "B.Tech CE",
+    "year": "First Year",
+    "email": "tanya.s@charusat.edu.in",
+    "mobile": "9876543224",
+    "cgpa": "9.2",
+    "status": "Active"
+  }
+]

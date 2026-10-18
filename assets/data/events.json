@@ -1,0 +1,152 @@
+[
+  {
+    "id": "EVT001",
+    "title": "Hackathon 2026",
+    "date": "2026-08-15",
+    "venue": "Seminar Hall A",
+    "category": "Technical",
+    "status": "Open",
+    "seats": 50,
+    "description": "Annual 24-hour full-stack web application development competition for CHARUSAT engineering students."
+  },
+  {
+    "id": "EVT002",
+    "title": "Sports Day Tournament",
+    "date": "2026-08-20",
+    "venue": "University Sports Ground",
+    "category": "Sports",
+    "status": "Open",
+    "seats": 120,
+    "description": "Inter-departmental athletics meet featuring track events, football, cricket, chess, and badminton."
+  },
+  {
+    "id": "EVT003",
+    "title": "Cultural Fest - Spandan",
+    "date": "2026-08-30",
+    "venue": "Central Auditorium",
+    "category": "Cultural",
+    "status": "Coming Soon",
+    "seats": 500,
+    "description": "Celebration of music, dance, drama, and fine arts across DEPSTAR institutes."
+  },
+  {
+    "id": "EVT004",
+    "title": "Tree Plantation Drive",
+    "date": "2026-09-05",
+    "venue": "Campus Botanical Garden",
+    "category": "Social",
+    "status": "Open",
+    "seats": 80,
+    "description": "Environmental awareness initiative organized by CHARUSAT Green Club."
+  },
+  {
+    "id": "EVT005",
+    "title": "Industrial Visit to TCS Sahaj",
+    "date": "2026-09-12",
+    "venue": "TCS Garima Park, Gandhinagar",
+    "category": "Educational",
+    "status": "Limited Seats",
+    "seats": 40,
+    "description": "Exclusive exposure visit for 3rd semester CSE & IT students to explore cloud data center operations."
+  },
+  {
+    "id": "EVT006",
+    "title": "Algorithmic Coding Contest",
+    "date": "2026-09-15",
+    "venue": "Computer Lab 3 & 4",
+    "category": "Technical",
+    "status": "Open",
+    "seats": 60,
+    "description": "Competitive programming round focused on Data Structures, Algorithms, and dynamic problem-solving."
+  },
+  {
+    "id": "EVT007",
+    "title": "National Tech Quiz Competition",
+    "date": "2026-09-18",
+    "venue": "Room 101, DEPSTAR",
+    "category": "Academic",
+    "status": "Open",
+    "seats": 45,
+    "description": "Rapid-fire technical quiz covering Web Standards, Operating Systems, and Computer Networks."
+  },
+  {
+    "id": "EVT008",
+    "title": "Debate Competition 2026",
+    "date": "2026-09-20",
+    "venue": "Seminar Hall B",
+    "category": "Academic",
+    "status": "Open",
+    "seats": 30,
+    "description": "Debate on Ethical AI, Cybersecurity Policies, and the Future of Autonomous Systems."
+  },
+  {
+    "id": "EVT009",
+    "title": "Campus Photography Contest",
+    "date": "2026-09-22",
+    "venue": "Main Amphitheatre",
+    "category": "Cultural",
+    "status": "Coming Soon",
+    "seats": 100,
+    "description": "Showcase your creative photography skills capturing life and architecture at CHARUSAT."
+  },
+  {
+    "id": "EVT010",
+    "title": "Blood Donation Camp",
+    "date": "2026-09-24",
+    "venue": "University Health Center",
+    "category": "Social",
+    "status": "Open",
+    "seats": 200,
+    "description": "Annual voluntary blood donation drive organized in partnership with Red Cross Society."
+  },
+  {
+    "id": "EVT011",
+    "title": "Robotics & IoT Workshop",
+    "date": "2026-09-26",
+    "venue": "Robotics Lab, FTE",
+    "category": "Technical",
+    "status": "Limited Seats",
+    "seats": 35,
+    "description": "Hands-on workshop building micro-controller sensor kits and IoT web dashboards."
+  },
+  {
+    "id": "EVT012",
+    "title": "Freshers Welcome Meet",
+    "date": "2026-09-28",
+    "venue": "Main Hall",
+    "category": "Cultural",
+    "status": "Coming Soon",
+    "seats": 350,
+    "description": "Official welcome ceremony and ice-breaker session for 2026 batch engineering students."
+  },
+  {
+    "id": "EVT013",
+    "title": "Career Guidance & Resume Seminar",
+    "date": "2026-10-02",
+    "venue": "Seminar Hall A",
+    "category": "Educational",
+    "status": "Open",
+    "seats": 150,
+    "description": "Expert advice on resume building, LinkedIn optimization, and placement interview strategies."
+  },
+  {
+    "id": "EVT014",
+    "title": "Alumni Networking Meet",
+    "date": "2026-10-05",
+    "venue": "University Auditorium",
+    "category": "Social",
+    "status": "Open",
+    "seats": 250,
+    "description": "Connect with CHARUSAT alumni working across top global tech leaders and startups."
+  },
+  {
+    "id": "EVT015",
+    "title": "Annual University Convocation Day",
+    "date": "2026-10-10",
+    "venue": "Main Sports Complex",
+    "category": "Cultural",
+    "status": "Coming Soon",
+    "seats": 1000,
+    "description": "Grand graduation ceremony conferring degrees upon graduating batches."
+  }
+]

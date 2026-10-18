@@ -1,0 +1,31 @@
+# Python cache & temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Microsoft Word temporary & lock files
+~$*.docx
+~$*.doc
+~WRL*.tmp
+*.tmp
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Practical documents & non-web folders
+Practical CIE 1/
+Poster Presentation/
+Practical File/
+
+# Word & PDF documents
+*.docx
+*.doc
+*.pdf
+
+# Python scripts
+*.py

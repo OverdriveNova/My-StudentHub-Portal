@@ -6,22 +6,27 @@
     <meta name="description" content="Student Profile Management - View and Edit Personal Student Details">
     <title>StudentHub - Student Profile</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>Student Profile Management</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>View and update registered account details for <b>Aarav Patel</b></small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +46,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -52,13 +57,13 @@
     <hr>
 
     <main id="main-content" tabindex="-1">
-        <!-- Lesson 3: Image with relative/absolute paths & privacy/alt attributes -->
+        
         <section id="avatar-section">
             <h2>Current Profile Picture</h2>
             <p>
-                <img src="https://via.placeholder.com/150.png?text=Aarav+Patel+Avatar" 
-                     alt="Aarav Patel Profile Avatar Placeholder" 
-                     width="150" 
+                <img src="/assets/images/Background_Img/profile_avatar.jpeg"
+                     alt="Aarav Patel Profile Avatar"
+                     width="150"
                      height="150" 
                      loading="lazy" 
                      referrerpolicy="no-referrer">
@@ -72,7 +77,7 @@
 
         <hr>
 
-        <!-- Lesson 5: Readonly Profile Data Table using Colspan & Rowspan -->
+        
         <section id="profile-summary-table">
             <h2>Official Student Record Details</h2>
 
@@ -113,7 +118,7 @@
 
         <hr>
 
-        <!-- Lesson 6: Profile Update Form with Input Validation Attributes -->
+        
         <section id="edit-profile-form">
             <h2>Update Profile Details</h2>
 
@@ -123,13 +128,13 @@
                 <fieldset>
                     <legend><strong>Editable Profile Information</strong></legend>
 
-                    <!-- File upload input for avatar -->
+                    
                     <p>
                         <label for="new_avatar">Upload New Avatar Image (PNG, JPG):</label><br>
                         <input type="file" id="new_avatar" name="avatar" accept="image/png, image/jpeg">
                     </p>
 
-                    <!-- Text input -->
+                    
                     <p>
                         <label for="prof_name">Full Name *:</label><br>
                         <input type="text" 
@@ -141,7 +146,7 @@
                                maxlength="50">
                     </p>
 
-                    <!-- Readonly Email input -->
+                    
                     <p>
                         <label for="prof_email">University Email (Readonly):</label><br>
                         <input type="email" 
@@ -151,7 +156,7 @@
                                readonly>
                     </p>
 
-                    <!-- Telephone input -->
+                    
                     <p>
                         <label for="prof_phone">Phone Contact Number *:</label><br>
                         <input type="tel" 
@@ -163,7 +168,7 @@
                                maxlength="10">
                     </p>
 
-                    <!-- URL input -->
+                    
                     <p>
                         <label for="prof_github">GitHub Profile URL:</label><br>
                         <input type="url" 
@@ -173,7 +178,7 @@
                                placeholder="https://github.com/username">
                     </p>
 
-                    <!-- Textarea input -->
+                    
                     <p>
                         <label for="prof_bio">Short Student Bio (Max 250 characters):</label><br>
                         <textarea id="prof_bio" 
@@ -198,5 +203,11 @@
         <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

@@ -6,22 +6,27 @@
     <meta name="description" content="Admin Control Dashboard - System Monitoring and Audit Logs">
     <title>StudentHub - Admin Dashboard</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>Admin Control Dashboard</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>System Moderation, Student Accounts &amp; Audit Trail</small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +46,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -52,34 +57,31 @@
     <hr>
 
     <main id="main-content" tabindex="-1">
-        <!-- Lesson 6: Admin Action Form -->
+        
         <section id="admin-actions">
-            <h2>Administrative Quick Actions &amp; User Search</h2>
+            <h2>Administrative Quick Actions &amp; Student Search (Fetch API)</h2>
 
-            <form action="admin.html" method="get">
-                <input type="hidden" name="action_source" value="ADMIN_CONSOLE_V1">
-
+            <form onsubmit="event.preventDefault();">
                 <p>
-                    <label for="admin-search">Search Registered User / Log ID:</label>
-                    <input type="search" id="admin-search" name="search_user" placeholder="e.g., 26IT001 or Aarav" required>
-                    
-                    <label for="user-role-filter">User Role:</label>
-                    <select id="user-role-filter" name="role">
-                        <option value="all">All Roles</option>
-                        <option value="student">Registered Students</option>
-                        <option value="faculty">Faculty Members</option>
-                        <option value="admin">System Administrators</option>
-                    </select>
-
-                    <button type="submit">Search Records</button>
-                    <button type="reset">Reset Search</button>
+                    <label for="studentSearch">Search Enrolled Students (Name, ID, Course, CGPA):</label>
+                    <input type="search" id="studentSearch" name="search_user" placeholder="e.g., 25DCS058, Aarav, CSE, or 9.0">
                 </p>
             </form>
         </section>
 
         <hr>
 
-        <!-- Lesson 5: Complex User Management Data Table -->
+        
+        <section id="json-student-section">
+            <h2>Dynamic Student Database Records (Fetched from students.json)</h2>
+            <div id="studentList">
+                <p class="loading-state">⏳ Loading student records...</p>
+            </div>
+        </section>
+
+        <hr>
+
+        
         <section id="user-table-section">
             <h2>Registered Users &amp; Security Roles Table</h2>
 
@@ -146,7 +148,7 @@
 
         <hr>
 
-        <!-- Lesson 4: Ordered List with start attribute for audit trail -->
+        
         <aside id="audit-trail">
             <h2>Recent Security &amp; Administrative Audit Logs</h2>
 
@@ -170,5 +172,11 @@
         <p><small>&copy; 2026 StudentHub Admin | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

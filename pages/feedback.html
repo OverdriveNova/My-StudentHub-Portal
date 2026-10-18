@@ -6,22 +6,27 @@
     <meta name="description" content="Student Feedback Survey - Rate Portal Navigation and Submit Suggestions">
     <title>StudentHub - Feedback Survey</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>Student Feedback &amp; Portal Survey</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>Help us improve StudentHub by rating portal accessibility, tables, and form usability</small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +46,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -64,14 +69,14 @@
                 <small>Please fill out this survey form. Fields marked with <strong>*</strong> are required.</small>
             </p>
 
-            <!-- Lesson 6: Comprehensive Feedback Form -->
+            
             <form action="feedback.html" method="post">
                 <input type="hidden" name="survey_id" value="SURVEY_SEM3_2026">
 
                 <fieldset>
                     <legend><strong>Respondent Contact Information</strong></legend>
 
-                    <!-- Text input -->
+                    
                     <p>
                         <label for="fb_name">Full Name (Optional):</label><br>
                         <input type="text" 
@@ -82,7 +87,7 @@
                                maxlength="50">
                     </p>
 
-                    <!-- Email input -->
+                    
                     <p>
                         <label for="fb_email">University Email Address *:</label><br>
                         <input type="email" 
@@ -92,7 +97,7 @@
                                required>
                     </p>
 
-                    <!-- Date input -->
+                    
                     <p>
                         <label for="fb_date">Date of Feedback Submission *:</label><br>
                         <input type="date" 
@@ -107,7 +112,7 @@
                 <fieldset>
                     <legend><strong>Portal Ratings &amp; Evaluation</strong></legend>
 
-                    <!-- Number input -->
+                    
                     <p>
                         <label for="overall_score">Overall Portal Satisfaction Rating (Scale 1 to 10) *:</label><br>
                         <input type="number" 
@@ -119,7 +124,7 @@
                                required>
                     </p>
 
-                    <!-- Radio buttons -->
+                    
                     <p>
                         <label>Portal Navigation &amp; Link Ease *:</label><br>
                         <input type="radio" id="rating_exc" name="nav_ease" value="Excellent" required>
@@ -135,7 +140,7 @@
                         <label for="rating_poor">2 or 1 - Poor</label>
                     </p>
 
-                    <!-- Select dropdown -->
+                    
                     <p>
                         <label for="fb_dept">Your Academic Department *:</label><br>
                         <select id="fb_dept" name="department" required>
@@ -147,7 +152,7 @@
                         </select>
                     </p>
 
-                    <!-- Checkboxes -->
+                    
                     <p>
                         <label>Which HTML concepts were demonstrated clearly? (Select all that apply):</label><br>
                         <input type="checkbox" id="feat_structure" name="features[]" value="Structure" checked>
@@ -169,7 +174,7 @@
                         <label for="feat_forms">Lesson 6: Forms &amp; Input Validation Attributes</label>
                     </p>
 
-                    <!-- Textarea -->
+                    
                     <p>
                         <label for="fb_comments">Additional Comments &amp; Suggestions (Max 500 characters):</label><br>
                         <textarea id="fb_comments" 
@@ -195,5 +200,11 @@
         <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

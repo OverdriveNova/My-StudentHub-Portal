@@ -6,22 +6,27 @@
     <meta name="description" content="Student Dashboard - View Enrolled Courses, Timetable, and Academic Notices">
     <title>StudentHub - Student Dashboard</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>Student Academic Dashboard</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>Semester 3 (2026-27 ODD Term) | Logged-in User: <b>Aarav Patel</b></small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +46,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -51,7 +56,7 @@
 
     <hr>
 
-    <!-- Lesson 3: Internal Page Jump Links (Anchors) -->
+    
     <section id="dashboard-anchors">
         <h2>Dashboard Quick Jump Links</h2>
         <p>Jump to section: 
@@ -65,7 +70,7 @@
     <hr>
 
     <main id="main-content" tabindex="-1">
-        <!-- Lesson 5: Profile Summary Table with Rowspan & Colspan -->
+        
         <section id="student-info">
             <h2>Student Profile Summary</h2>
             <table border="1" cellpadding="6" cellspacing="0">
@@ -95,11 +100,11 @@
 
         <hr>
 
-        <!-- Lesson 5: Complex Course Schedule Data Table -->
+        
         <section id="courses">
             <h2>Enrolled Modules (Semester 3)</h2>
 
-            <!-- Lesson 6: Search Filter Form -->
+            
             <form action="dashboard.html" method="get">
                 <p>
                     <label for="course-filter">Filter Enrolled Modules:</label>
@@ -168,7 +173,7 @@
 
         <hr>
 
-        <!-- Lesson 4: Ordered List with Roman Numerals (type="I") -->
+        
         <section id="schedule">
             <h2>Weekly Academic Schedule (Lab &amp; Practical Order)</h2>
             <ol type="I">
@@ -181,7 +186,7 @@
 
         <hr>
 
-        <!-- Lesson 2: Formatting Elements & Paragraphs -->
+        
         <aside id="notices">
             <h2>Academic Notices for Aarav Patel</h2>
             <ul>
@@ -203,5 +208,11 @@
         <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

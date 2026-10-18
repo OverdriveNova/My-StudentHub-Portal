@@ -6,22 +6,27 @@
     <meta name="description" content="User Login Page - StudentHub Portal">
     <title>StudentHub - User Login</title>
     
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    <!-- Skip to Main Content Link for Keyboard Accessibility -->
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Lesson 1: Header -->
+    
     <header>
         <h1>User Authentication Portal</h1>
         <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
         <p><small>Access Student &amp; Faculty Accounts</small></p>
+        <div class="header-actions">
+            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+        </div>
     </header>
 
     <hr>
 
-    <!-- Lesson 3: Navigation -->
+    
     <nav aria-label="Main Navigation Menu">
         <h2>Portal Quick Navigation</h2>
         <ul>
@@ -41,7 +46,7 @@
 
     <hr>
 
-    <!-- Breadcrumb Navigation -->
+    
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -56,16 +61,16 @@
             <h2>Account Login Form</h2>
             <p>Please enter your registered CHARUSAT email address and password to sign in.</p>
 
-            <!-- Lesson 6: Login Form -->
+            
             <form action="dashboard.html" method="post">
 
-                <!-- Hidden Input token -->
+                
                 <input type="hidden" id="login_token" name="login_token" value="SECURE_SESSION_TOKEN_2026">
 
                 <fieldset>
                     <legend><strong>Login Credentials</strong></legend>
 
-                    <!-- Email Input -->
+                    
                     <p>
                         <label for="login_email">Registered Email Address *:</label><br>
                         <input type="email" 
@@ -75,7 +80,7 @@
                                required>
                     </p>
 
-                    <!-- Password Input -->
+                    
                     <p>
                         <label for="login_password">Account Password *:</label><br>
                         <input type="password" 
@@ -87,13 +92,13 @@
                                maxlength="20">
                     </p>
 
-                    <!-- Checkbox Input -->
+                    
                     <p>
                         <input type="checkbox" id="remember_session" name="remember_session" value="1" checked>
                         <label for="remember_session">Remember me on this browser session</label>
                     </p>
 
-                    <!-- Buttons -->
+                    
                     <p>
                         <button type="submit">Log In to Dashboard</button>
                         <button type="reset">Clear Fields</button>
@@ -104,7 +109,7 @@
 
             <br>
 
-            <!-- Help Links -->
+            
             <aside id="login-support">
                 <h3>Need help accessing your account?</h3>
                 <ul>
@@ -122,5 +127,11 @@
         <p><small>&copy; 2026 StudentHub | <a href="../index.html">Return to Home Page</a></small></p>
     </footer>
 
+    
+    <script src="../assets/js/theme-nav.js"></script>
+    <script src="../assets/js/registration-validation.js"></script>
+    <script src="../assets/js/fetch-data.js"></script>
+
 </body>
 </html>
+

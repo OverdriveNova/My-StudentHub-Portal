@@ -1,0 +1,92 @@
+[
+  {
+    "id": "FAQ001",
+    "question": "What is StudentHub?",
+    "category": "General",
+    "answer": "StudentHub is an integrated college student portal for managing academic schedules, campus event registrations, student profiles, and administrative queries for CHARUSAT DEPSTAR."
+  },
+  {
+    "id": "FAQ002",
+    "question": "How can I register for a new student account?",
+    "category": "Registration",
+    "answer": "Open the Student Registration page from the quick navigation menu, fill in all mandatory fields (Name, Email, Mobile, Gender, Department, Year, Password), upload your Student ID proof, accept the terms, and click Submit Registration."
+  },
+  {
+    "id": "FAQ003",
+    "question": "How can I log in to my student portal?",
+    "category": "Registration",
+    "answer": "Open the User Login page and enter your registered CHARUSAT Email or Username and Password."
+  },
+  {
+    "id": "FAQ004",
+    "question": "Where can I see upcoming campus events?",
+    "category": "Events",
+    "answer": "You can view all scheduled university events on the Campus Events page, where you can search, filter by category or status, and register directly."
+  },
+  {
+    "id": "FAQ005",
+    "question": "Can I search for specific events on the portal?",
+    "category": "Events",
+    "answer": "Yes, use the live search box on the Campus Events page to filter events instantaneously by event title, category, or venue."
+  },
+  {
+    "id": "FAQ006",
+    "question": "Can I filter events by their current status?",
+    "category": "Events",
+    "answer": "Yes, selecting options like 'Open', 'Limited Seats', or 'Coming Soon' from the status filter dropdown will isolate matching event cards."
+  },
+  {
+    "id": "FAQ007",
+    "question": "Can I sort events by start date?",
+    "category": "Events",
+    "answer": "Yes, clicking the 'Sort by Date' button will re-order the displayed event cards chronologically."
+  },
+  {
+    "id": "FAQ008",
+    "question": "How can I update my profile details?",
+    "category": "Academic",
+    "answer": "Navigate to the Student Profile page, update your personal or academic information in the form fields, and click 'Update Profile'."
+  },
+  {
+    "id": "FAQ009",
+    "question": "What should I do if I forget my password?",
+    "category": "Registration",
+    "answer": "Use the 'Forgot Password' link available on the User Login page or contact the IT Helpdesk through the Contact Support page."
+  },
+  {
+    "id": "FAQ010",
+    "question": "Is registration mandatory to participate in campus events?",
+    "category": "Events",
+    "answer": "Yes, students must register and log in to obtain event passes and track their activity history on the student dashboard."
+  },
+  {
+    "id": "FAQ011",
+    "question": "Where can I view my registered events and activity log?",
+    "category": "Academic",
+    "answer": "Access the Student Dashboard page to review your upcoming exam schedule, registered hackathons, and overall participation history."
+  },
+  {
+    "id": "FAQ012",
+    "question": "How can I contact technical support if I experience errors?",
+    "category": "General",
+    "answer": "Visit the Contact Support page and submit an inquiry form. Our IT support team responds within 24 business hours."
+  },
+  {
+    "id": "FAQ013",
+    "question": "What password rules are enforced during registration?",
+    "category": "Registration",
+    "answer": "Passwords must be at least 8 characters long and contain at least one uppercase letter, one numeric digit, and one special character."
+  },
+  {
+    "id": "FAQ014",
+    "question": "How do administrative staff access the admin panel?",
+    "category": "Academic",
+    "answer": "Authorized staff members can log in using Admin Credentials on the Admin Portal page to review student records and manage events."
+  },
+  {
+    "id": "FAQ015",
+    "question": "Does StudentHub work on mobile phones and tablets?",
+    "category": "General",
+    "answer": "Yes! StudentHub features a modern responsive design built using CSS Grid, Flexbox, media queries, and touch-friendly navigation."
+  }
+]
