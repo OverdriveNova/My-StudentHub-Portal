@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
     --primary-color: #1b365d;
     --primary-light: #2563eb;
@@ -18,9 +20,50 @@
     --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 16px;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
+}
+
+body.dark {
+    --primary-color: #60a5fa;
+    --primary-light: #93c5fd;
+    --primary-dark: #0f172a;
+    --secondary-color: #2dd4bf;
+    --accent-color: #fb7185;
+    --bg-main: #0b0f19;
+    --bg-card: #131b2e;
+    --bg-alt: #1c2640;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-color: #283553;
+    --border-dark: #374151;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+}
+
+body.dark article h3 {
+    color: #93c5fd;
+}
+
+body.dark mark {
+    background-color: rgba(245, 158, 11, 0.25);
+    color: #fde047;
+}
+
+body.dark ins {
+    color: #4ade80;
+}
+
+body.dark del {
+    color: #f87171;
+}
+
+body.dark input[readonly], body.dark input:disabled {
+    background-color: #1e293b;
+    color: #64748b;
 }
 
 *, *::before, *::after {
@@ -105,7 +148,7 @@ hr {
 }
 
 nav[aria-label="Main Navigation Menu"] {
-    background-color: #ffffff;
+    background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
     padding: 0.75rem 1.5rem;
     box-shadow: var(--shadow-sm);
@@ -366,7 +409,7 @@ textarea {
     border-radius: var(--radius-sm);
     font-family: inherit;
     font-size: 0.95rem;
-    background-color: #ffffff;
+    background-color: var(--bg-card);
     color: var(--text-primary);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -421,7 +464,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.25rem 0;
-    background-color: #ffffff;
+    background-color: var(--bg-card);
     border-radius: var(--radius-sm);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
@@ -460,7 +503,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background-color: #eff6ff;
+    background-color: var(--bg-alt);
 }
 
 tfoot {
