@@ -49,7 +49,7 @@ Web Development/
 │       ├── Background_Img/             # Campus banner image & profile avatar
 │       └── screenshots/               # Multi-device responsive screenshots
 │
-├── backend/                            # PHP Server-Side Practicals (7–12)
+├── backend/                            # PHP Server-Side Practicals (7–15)
 │   ├── README.md                       # Setup guide for PHP practicals
 │   ├── Practical7/
 │   │   └── index.php                   # PHP form processing, CSRF, validation, CSV export
@@ -64,9 +64,17 @@ Web Development/
 │   │   └── index.php                   # Secure auth, session timeout, RBAC, remember-me token
 │   ├── Practical11/
 │   │   └── index.php                   # Student CRUD, search, filter, CSV export, soft delete
-│   └── Practical12/
-│       ├── index.php                   # Event CRUD, validated poster upload, status management
-│       └── uploads/                    # Upload directory with .htaccess protection
+│   ├── Practical12/
+│   │   ├── index.php                   # Event CRUD, validated poster upload, status management
+│   │   └── uploads/                    # Upload directory with .htaccess protection
+│   ├── Practical13/
+│   │   ├── api.php                     # RESTful JSON API endpoint (GET/POST/PUT/DELETE)
+│   │   └── index.php                   # Asynchronous Fetch API CRUD interface with debounced search
+│   ├── Practical14/
+│   │   └── index.php                   # Admin RBAC dashboard, dynamic menu, user status toggle, chart
+│   └── Practical15/
+│       ├── apache_vhost.conf           # Apache Virtual Host deployment configuration
+│       └── index.php                   # Master integration hub, runtime diagnostics, compliance audit
 │
 └── docs/                               # Reference documents
     └── learning reference/
@@ -92,9 +100,20 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 ├── Practical11/                        # Student Management Module CRUD with Search & Filter
 │   └── index.php                       # MySQLi prepared statements CRUD, CSV export, soft-delete
 │
-└── Practical12/                        # Event Management Module CRUD with Poster Upload
-    ├── index.php                       # Event CRUD, MIME & size validated poster upload
-    └── uploads/                        # Uploaded event posters with .htaccess protection
+├── Practical12/                        # Event Management Module CRUD with Poster Upload
+│   ├── index.php                       # Event CRUD, MIME & size validated poster upload
+│   └── uploads/                        # Uploaded event posters with .htaccess protection
+│
+├── Practical13/                        # Asynchronous JSON API & Fetch CRUD
+│   ├── api.php                         # RESTful JSON API backend
+│   └── index.php                       # Asynchronous SPA interface
+│
+├── Practical14/                        # Admin Dashboard with RBAC & Dynamic Menus
+│   └── index.php                       # Administrative monitoring panel, status toggle, analytics
+│
+└── Practical15/                        # Master Integration, Testing & Deployment Hub
+    ├── apache_vhost.conf               # Apache Virtual Host configuration
+    └── index.php                       # System health diagnostics and compliance audit matrix
 ```
 
 ---
@@ -147,7 +166,7 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 
 ---
 
-## Practical Summary (Practicals 1 to 12)
+## Practical Summary (Practicals 1 to 15)
 
 ### Practical 1 — Project Setup, Sitemap & Wireframes
 
@@ -388,6 +407,61 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 
 ---
 
+### Practical 13 — PHP JSON API and AJAX/Fetch-Based CRUD without Page Reload
+
+**What we did:**
+- Built a RESTful PHP JSON API (`api.php`) supporting `GET`, `POST`, `PUT`, and `DELETE` requests.
+- Implemented standard JSON response formatting with appropriate HTTP status codes (`200 OK`, `201 Created`, `400 Bad Request`, `404 Not Found`, `500 Server Error`).
+- Created an asynchronous Single Page Application (SPA) frontend consuming the JSON API using the browser `fetch()` API.
+- Implemented **debounced search** (Intermediate Extension): delays query dispatch by 300ms as the user types to prevent excessive server requests.
+- Implemented asynchronous modal CRUD: Add Event and Edit Event modals dynamically post JSON payloads and update the DOM in real-time without page reloads.
+- Built asynchronous Delete Event with interactive confirmation dialog and CSS transition exit animation.
+- Created real-time toast notification system providing visual success and error feedback.
+
+**What was new in this practical:**
+- Designing and implementing RESTful JSON API endpoints in PHP (`php://input`, `json_decode`, `json_encode`).
+- Replacing multi-page navigation and form refreshes with single-page Fetch API calls.
+- Frontend search debouncing with JavaScript timers.
+
+---
+
+### Practical 14 — Admin Dashboard with Role-Based Access Control, Dynamic Menu, and Audit Log
+
+**What we did:**
+- Developed a comprehensive administrative dashboard restricted to users with the `admin` role.
+- Implemented **Role-Based Access Control (RBAC)** gatekeeping: unauthorized users (Guests or Students) receive a styled Access Denied alert with quick role-switching simulation for testing.
+- Built a **Dynamic Role-Based Menu**: navigation menu items adapt dynamically based on whether the logged-in user is an Admin, Student, or Guest.
+- Displayed aggregated real-time database KPIs (Total Users, Enrolled Students, Active/Inactive Accounts, Published Events, Total Registrations).
+- Implemented **Active/Inactive User Status Toggle** (Intermediate Extension) with immediate database persistence and audit trail generation.
+- Created a pure HTML5/CSS **Registration Analytics Bar Chart** (Advanced Extension) dynamically calculating and visualizing event registrations across campus categories (Technical, Sports, Cultural, Career).
+- Integrated a live System Security Audit Log stream tracking the latest 10 administrative actions.
+
+**What was new in this practical:**
+- Implementing server-side RBAC authorization gates across sensitive admin features.
+- Dynamic navigation rendering conditioned on session role values.
+- Generating pure CSS/HTML responsive data visualizations without heavy third-party charting libraries.
+
+---
+
+### Practical 15 — Final Integration, Testing, Documentation, and Local Deployment
+
+**What we did:**
+- Integrated all 15 semester practical modules into a single unified StudentHub portal.
+- Created an interactive **Integration & Diagnostics Hub** (`Practical15/index.php`):
+  - Live server runtime health inspection (PHP version, `mysqli`, `pdo_mysql`, `session`, `fileinfo`, `json` extensions).
+  - Live relational database health check validating connectivity and record counts across all 6 database tables.
+  - Verification of directory write permissions and `.htaccess` execution shields.
+- Created the **Practical Master Matrix**: an interactive visual index linking all 15 practicals with module category, technologies, and instant launch buttons.
+- Conducted comprehensive security and accessibility audits (WCAG 2.1 AA accessibility, SQL injection defense, CSRF tokens, session fixation defense, remote code execution protection).
+- Created a production-ready **Apache Virtual Host configuration** (`apache_vhost.conf`) for local deployment under `http://studenthub.local`.
+
+**What was new in this practical:**
+- Full-stack project unification linking HTML5/CSS/JS frontend with PHP/MySQL backend architecture.
+- Automated server diagnostics and database integrity verification.
+- Virtual host configuration for Apache in XAMPP.
+
+---
+
 ## Technology Stack
 
 | Technology | Purpose |
@@ -395,11 +469,11 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 | HTML5 | Page structure, semantic elements, forms, tables |
 | CSS3 | Responsive layout (Grid + Flexbox), dark mode, animations |
 | Vanilla JavaScript | DOM manipulation, Fetch API, form validation, localStorage |
-| JSON | External static data store for events, students, FAQs |
-| PHP 8.x | Server-side execution, form handling, session security, database operations, file uploads |
+| JSON | External static data store for events, students, FAQs, and REST API payloads |
+| PHP 8.x | Server-side execution, form handling, session security, database operations, file uploads, JSON REST APIs |
 | MySQL / MariaDB | Relational database management system |
 | PDO & MySQLi | Secure database abstraction layers with prepared statements |
-| Apache (XAMPP) | Local web server environment |
+| Apache (XAMPP) | Local web server environment and virtual host hosting |
 | Git & GitHub | Version control and lab submission |
 
 ---
@@ -410,7 +484,7 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 1. Serve the workspace folder with a local HTTP server (e.g., **VS Code Live Server** extension) so `fetch()` can read JSON files without CORS restriction.
 2. Open `http://127.0.0.1:5500/index.html` in any browser.
 
-### Backend PHP & Database Pages (Practicals 7–12)
+### Backend PHP & Database Pages (Practicals 7–15)
 1. Start **XAMPP Control Panel** and turn on **Apache** and **MySQL** services.
 2. Ensure the PHP practical folders reside in `C:\xampp\htdocs\`:
    - `C:\xampp\htdocs\Practical7\`
@@ -419,6 +493,9 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
    - `C:\xampp\htdocs\Practical10\`
    - `C:\xampp\htdocs\Practical11\`
    - `C:\xampp\htdocs\Practical12\`
+   - `C:\xampp\htdocs\Practical13\`
+   - `C:\xampp\htdocs\Practical14\`
+   - `C:\xampp\htdocs\Practical15\`
 3. Import database schema and seeds into MySQL via phpMyAdmin or MySQL CLI:
    - Run `C:\xampp\htdocs\Practical8\studenthub_schema.sql`
    - Run `C:\xampp\htdocs\Practical8\studenthub_seed.sql`
@@ -429,6 +506,9 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
    - **Practical 10:** `http://localhost/Practical10/index.php`
    - **Practical 11:** `http://localhost/Practical11/index.php`
    - **Practical 12:** `http://localhost/Practical12/index.php`
+   - **Practical 13:** `http://localhost/Practical13/index.php`
+   - **Practical 14:** `http://localhost/Practical14/index.php`
+   - **Practical 15:** `http://localhost/Practical15/index.php`
 
 ---
 

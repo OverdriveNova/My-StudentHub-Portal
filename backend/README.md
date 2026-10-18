@@ -1,4 +1,4 @@
-# Backend Practicals — PHP & MySQL (Practicals 7–12)
+# Backend Practicals — PHP & MySQL (Practicals 7–15)
 
 **Student:** RUDRA MODI (25DCS058) | **Course:** ITUE203 Web Development Frameworks | **DEPSTAR CHARUSAT 2026**
 
@@ -7,7 +7,7 @@
 ## Requirements
 
 - **XAMPP** (Apache + MySQL/MariaDB + PHP 8.x)
-- PHP extensions: `mysqli`, `pdo_mysql`, `session`, `fileinfo`
+- PHP extensions: `mysqli`, `pdo_mysql`, `session`, `fileinfo`, `json`
 
 ## Setup Instructions
 
@@ -21,9 +21,12 @@ C:\xampp\htdocs\Practical9\    ← copy from backend/Practical9/
 C:\xampp\htdocs\Practical10\   ← copy from backend/Practical10/
 C:\xampp\htdocs\Practical11\   ← copy from backend/Practical11/
 C:\xampp\htdocs\Practical12\   ← copy from backend/Practical12/
+C:\xampp\htdocs\Practical13\   ← copy from backend/Practical13/
+C:\xampp\htdocs\Practical14\   ← copy from backend/Practical14/
+C:\xampp\htdocs\Practical15\   ← copy from backend/Practical15/
 ```
 
-3. For Practicals 8–12, import the database:
+3. For Practicals 8–15, import the database:
    - Open [phpMyAdmin](http://localhost/phpmyadmin)
    - Run `backend/Practical8/studenthub_schema.sql` (creates DB + tables)
    - Run `backend/Practical8/studenthub_seed.sql` (inserts 20 students, events, audit logs)
@@ -35,6 +38,9 @@ C:\xampp\htdocs\Practical12\   ← copy from backend/Practical12/
    - **Practical 10:** http://localhost/Practical10/
    - **Practical 11:** http://localhost/Practical11/
    - **Practical 12:** http://localhost/Practical12/
+   - **Practical 13:** http://localhost/Practical13/
+   - **Practical 14:** http://localhost/Practical14/
+   - **Practical 15:** http://localhost/Practical15/
 
 ---
 
@@ -134,7 +140,53 @@ C:\xampp\htdocs\Practical12\   ← copy from backend/Practical12/
 - Cryptographically safe file renaming (`poster_<timestamp>_<random>.<ext>`) preventing directory traversal and overwriting
 - Direct file cleanup (`unlink()`) on event deletion or poster replacement
 - Intermediate extension: Event filtering by category and registration status
-- Advanced extension: Directory protection via `.htaccess` (`Order Deny,Allow`, `Deny from all` on script extensions) and audit logging
+- Advanced extension: Directory protection via `.htaccess` and audit logging
+
+---
+
+## Practical 13 — PHP JSON API & Asynchronous Fetch CRUD
+
+| File | Purpose |
+|------|---------|
+| `api.php` | RESTful JSON API handling GET, POST, PUT, DELETE with HTTP status codes and centralized response handler |
+| `index.php` | Asynchronous single-page event manager: debounced live search, async modal CRUD, toast notifications |
+
+**Key concepts demonstrated:**
+- RESTful JSON API returning structured payloads with proper status codes (200, 201, 400, 404, 500)
+- Asynchronous CRUD via browser `fetch()` API without full page reloads
+- Debounced live search delaying execution by 300ms to minimize server queries
+- Dynamic DOM insertion, update, and removal with CSS animation transitions
+- Unified JSON error handling and real-time toast feedback
+
+---
+
+## Practical 14 — Admin Dashboard with RBAC, Dynamic Menu & Analytics
+
+| File | Purpose |
+|------|---------|
+| `index.php` | Superuser administrative panel: role inspection, dynamic navigation bar, active user toggle, pure bar chart, audit log |
+
+**Key concepts demonstrated:**
+- Role-Based Access Control strictly gatekeeping sensitive administrative operations
+- Dynamic navigation menu adapting its items based on current role (`admin` vs `student` vs `guest`)
+- Active/Inactive account toggle with immediate persistence and audit trail logging
+- Pure CSS/HTML data analytics bar chart visualizing event registrations by category
+- System activity monitor tracking recent logins, status changes, and deletions
+
+---
+
+## Practical 15 — Full-Stack Integration, Testing & Deployment Hub
+
+| File | Purpose |
+|------|---------|
+| `index.php` | Master integration dashboard, server runtime health check, database diagnostics, navigation matrix, compliance checklist |
+| `apache_vhost.conf` | Virtual host template for deploying StudentHub to `http://studenthub.local` |
+
+**Key concepts demonstrated:**
+- Comprehensive system health verification across PHP runtime, extensions, database, and file permissions
+- Full-stack integration matrix connecting all 15 semester practicals into a unified portal
+- End-to-end verification checklist covering WCAG 2.1 AA accessibility, SQL injection, CSRF, and session fixation
+- Apache Virtual Host deployment configuration and local DNS mapping
 
 ---
 
