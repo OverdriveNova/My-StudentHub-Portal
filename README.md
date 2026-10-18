@@ -49,7 +49,7 @@ Web Development/
 │       ├── Background_Img/             # Campus banner image & profile avatar
 │       └── screenshots/               # Multi-device responsive screenshots
 │
-├── backend/                            # PHP Server-Side Practicals (7–9)
+├── backend/                            # PHP Server-Side Practicals (7–12)
 │   ├── README.md                       # Setup guide for PHP practicals
 │   ├── Practical7/
 │   │   └── index.php                   # PHP form processing, CSRF, validation, CSV export
@@ -58,8 +58,15 @@ Web Development/
 │   │   ├── index.php                   # Database dashboard, schema viewer, SQL joins
 │   │   ├── studenthub_schema.sql       # Database DDL schema (5 tables)
 │   │   └── studenthub_seed.sql         # Seed data (20+ students, events, audit logs)
-│   └── Practical9/
-│       └── index.php                   # Secure registration, Bcrypt hashing, PDO transactions
+│   ├── Practical9/
+│   │   └── index.php                   # Secure registration, Bcrypt hashing, PDO transactions
+│   ├── Practical10/
+│   │   └── index.php                   # Secure auth, session timeout, RBAC, remember-me token
+│   ├── Practical11/
+│   │   └── index.php                   # Student CRUD, search, filter, CSV export, soft delete
+│   └── Practical12/
+│       ├── index.php                   # Event CRUD, validated poster upload, status management
+│       └── uploads/                    # Upload directory with .htaccess protection
 │
 └── docs/                               # Reference documents
     └── learning reference/
@@ -76,8 +83,18 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 │   ├── studenthub_schema.sql           # Database DDL schema (5 tables)
 │   └── studenthub_seed.sql             # SQL seed script (20+ students, events, audit logs)
 │
-└── Practical9/                         # Secure Database Operations & User Registration
-    └── index.php                       # Registration processor, duplicate checks, Bcrypt hashing
+├── Practical9/                         # Secure Database Operations & User Registration
+│   └── index.php                       # Registration processor, duplicate checks, Bcrypt hashing
+│
+├── Practical10/                        # Secure Session Authentication & Role-Based Access Control
+│   └── index.php                       # Login/Logout, password_verify, 15-min timeout, RBAC
+│
+├── Practical11/                        # Student Management Module CRUD with Search & Filter
+│   └── index.php                       # MySQLi prepared statements CRUD, CSV export, soft-delete
+│
+└── Practical12/                        # Event Management Module CRUD with Poster Upload
+    ├── index.php                       # Event CRUD, MIME & size validated poster upload
+    └── uploads/                        # Uploaded event posters with .htaccess protection
 ```
 
 ---
@@ -130,7 +147,7 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 
 ---
 
-## Practical Summary (1 to 6)
+## Practical Summary (Practicals 1 to 12)
 
 ### Practical 1 — Project Setup, Sitemap & Wireframes
 
@@ -312,6 +329,65 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 
 ---
 
+### Practical 10 — Secure Login/Logout with Sessions, Role-Based Access, Timeout, and Remember-Me Token
+
+**What we did:**
+- Developed complete secure authentication workflow using PHP native sessions and anti-CSRF token verification.
+- Verified passwords safely using `password_verify()` against bcrypt hashes stored in `studenthub.users`.
+- Implemented session fixation defense by calling `session_regenerate_id(true)` immediately after successful authentication.
+- Implemented automated **15-minute inactivity timeout**: tracks `$_SESSION['last_activity']`, destroys expired sessions, and redirects with notification.
+- Built **Role-Based Access Control (RBAC)**:
+  - **Admin View**: Displays university metrics, management links, and live security audit logs.
+  - **Student View**: Displays individual profile card (enrollment number, semester, CGPA) and enrolled campus events.
+- Implemented **Database-Backed Remember-Me** (Advanced Extension): generates 64-character cryptographic tokens, stores SHA-256 hash in `remember_tokens` table for 30 days, and auto-logs in via HTTP-only cookie.
+- Recorded comprehensive audit trails in `audit_logs` table for successful logins, failed attempts, timeouts, and manual logouts.
+
+**What was new in this practical:**
+- Complete session lifecycle security: `session_regenerate_id()`, cookie param flags (`httponly`, `samesite`), `session_destroy()`.
+- Client and server timeout synchronization with a live JavaScript countdown timer.
+- Database-backed token persistence for long-term authentication without storing raw credentials in cookies.
+
+---
+
+### Practical 11 — Student Management CRUD with Search and Filter
+
+**What we did:**
+- Developed data-driven administrative student management module implementing full CRUD operations.
+- Built all database queries using parameterized **MySQLi prepared statements** preventing SQL injection.
+- Implemented multi-field keyword search across name, email, enrollment number, and mobile phone.
+- Built multi-criteria filtering by academic program (CSE, IT, ECE, ME, CE), semester (1–8), and account status.
+- Implemented **Soft Delete** toggle (Advanced Extension) using account status column (`active` / `inactive`), as well as permanent hard delete with modal confirmation.
+- Implemented **CSV Export** stream (Intermediate Extension): dynamically generates downloadable `.csv` spreadsheet containing filtered student records.
+- Added live statistical metrics: Total Students, Active Accounts, Inactive Accounts, and Average CGPA.
+
+**What was new in this practical:**
+- Full MySQLi prepared statement lifecycle (`prepare`, `bind_param`, `execute`, `get_result`).
+- Building dynamic WHERE clauses with variable parameter binding for combinable filters.
+- Generating HTTP streaming file downloads (`Content-Type: text/csv`, `php://output`, `fputcsv`).
+
+---
+
+### Practical 12 — Event Management CRUD with Poster Upload and File Validation
+
+**What we did:**
+- Developed administrative event management module with full CRUD and multi-criteria event filtering.
+- Implemented server-side file upload pipeline for event poster images with rigorous security validation:
+  - True MIME type verification via `finfo_file(FILEINFO_MIME_TYPE)` (`image/jpeg`, `image/png`, `image/webp`).
+  - File extension whitelisting (`.jpg`, `.jpeg`, `.png`, `.webp`).
+  - Maximum upload size enforcement (max 2MB).
+  - Cryptographically safe file renaming (`poster_<timestamp>_<random>.<ext>`) to prevent directory traversal and file overwriting.
+- Protected upload storage directory via Apache `.htaccess` (`FilesMatch` blocking PHP execution and disabling directory indexing).
+- Automated physical file deletion (`unlink()`) when an event is deleted or its poster is replaced.
+- Integrated event status management (`Open`, `Limited Seats`, `Coming Soon`, `Closed`) and category filters (`Technical`, `Sports`, `Cultural`, `Career`).
+- Automated activity auditing into `audit_logs` for event creation, updates, and removals.
+
+**What was new in this practical:**
+- Handling `multipart/form-data` uploads in PHP (`$_FILES`) with error code inspection.
+- MIME type sniffing via `finfo_file` to block disguised executable scripts.
+- Apache `.htaccess` directory hardening against remote code execution.
+
+---
+
 ## Technology Stack
 
 | Technology | Purpose |
@@ -320,7 +396,7 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 | CSS3 | Responsive layout (Grid + Flexbox), dark mode, animations |
 | Vanilla JavaScript | DOM manipulation, Fetch API, form validation, localStorage |
 | JSON | External static data store for events, students, FAQs |
-| PHP 8.x | Server-side execution, form handling, session security, database operations |
+| PHP 8.x | Server-side execution, form handling, session security, database operations, file uploads |
 | MySQL / MariaDB | Relational database management system |
 | PDO & MySQLi | Secure database abstraction layers with prepared statements |
 | Apache (XAMPP) | Local web server environment |
@@ -334,12 +410,15 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
 1. Serve the workspace folder with a local HTTP server (e.g., **VS Code Live Server** extension) so `fetch()` can read JSON files without CORS restriction.
 2. Open `http://127.0.0.1:5500/index.html` in any browser.
 
-### Backend PHP & Database Pages (Practicals 7–9)
+### Backend PHP & Database Pages (Practicals 7–12)
 1. Start **XAMPP Control Panel** and turn on **Apache** and **MySQL** services.
 2. Ensure the PHP practical folders reside in `C:\xampp\htdocs\`:
    - `C:\xampp\htdocs\Practical7\`
    - `C:\xampp\htdocs\Practical8\`
    - `C:\xampp\htdocs\Practical9\`
+   - `C:\xampp\htdocs\Practical10\`
+   - `C:\xampp\htdocs\Practical11\`
+   - `C:\xampp\htdocs\Practical12\`
 3. Import database schema and seeds into MySQL via phpMyAdmin or MySQL CLI:
    - Run `C:\xampp\htdocs\Practical8\studenthub_schema.sql`
    - Run `C:\xampp\htdocs\Practical8\studenthub_seed.sql`
@@ -347,6 +426,9 @@ XAMPP Web Server Deployment (C:\xampp\htdocs\):
    - **Practical 7:** `http://localhost/Practical7/index.php`
    - **Practical 8:** `http://localhost/Practical8/index.php`
    - **Practical 9:** `http://localhost/Practical9/index.php`
+   - **Practical 10:** `http://localhost/Practical10/index.php`
+   - **Practical 11:** `http://localhost/Practical11/index.php`
+   - **Practical 12:** `http://localhost/Practical12/index.php`
 
 ---
 
