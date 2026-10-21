@@ -14,52 +14,83 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     
-    <header>
-        <h1>Admin Control Dashboard</h1>
-        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
-        <p><small>System Moderation, Student Accounts &amp; Audit Trail</small></p>
-        <div class="header-actions">
-            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
-            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+    <!-- TOP ACCESS BAR — University Utility Strip -->
+    <div class="top-access-bar">
+        <div class="top-access-container">
+            <ul class="top-access-links">
+                <li><a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">Alumni</a></li>
+                <li><a href="about.html">Careers</a></li>
+                <li><a href="about.html">NIRF</a></li>
+                <li><a href="about.html">IQAC</a></li>
+                <li><a href="admin.html">Placement</a></li>
+                <li><a href="about.html">Scholarship</a></li>
+                <li><a href="dashboard.html">Library-KRC</a></li>
+                <li><a href="dashboard.html">Student Corner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="top-access-actions">
+                <span class="status-pill"><span class="status-dot"></span> AY 2026-27</span>
+                <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PORTAL HEADER — Distinctive Modern Design -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-identity">
+                <div class="brand-logo-card">
+                    <img src="../assets/images/charusat_logo.png" alt="CHARUSAT DEPSTAR Logo" class="brand-logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Student<span class="brand-name-accent">Hub</span></span>
+                    <span class="brand-sub">CHARUSAT DEPSTAR • Academic Portal</span>
+                </div>
+            </a>
+
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
+            <nav aria-label="Main Navigation Menu">
+                <h2>Portal Quick Navigation</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="events.html">Campus Events</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="admin.html" aria-current="page">Admin Portal</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html" class="nav-cta-btn">Register 2026</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <hr>
-
-    
-    <nav aria-label="Main Navigation Menu">
-        <h2>Portal Quick Navigation</h2>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="register.html">Student Registration</a></li>
-            <li><a href="login.html">User Login</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="events.html">Campus Events</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="contact.html">Contact Support</a></li>
-            <li><a href="admin.html">Admin Portal</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="feedback.html">Feedback Survey</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    
-    <nav aria-label="Breadcrumb" class="breadcrumbs">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="admin.html" aria-current="page">Admin Portal</a></li>
-        </ul>
-    </nav>
-
-    <hr>
+    <!-- ELEVATED PAGE TITLE & BREADCRUMBS BAR -->
+    <div class="page-title-bar">
+        <div class="page-title-container">
+            <div class="page-title-left">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="admin.html" aria-current="page">Admin Portal</a></li>
+                    </ul>
+                </nav>
+                <h1 class="page-title">Admin Control Dashboard</h1>
+            </div>
+            <div class="page-title-right">
+                <span class="page-badge">CHARUSAT DEPSTAR • Administrative Access</span>
+            </div>
+        </div>
+    </div>
 
     <main id="main-content" tabindex="-1">
         
         <section id="admin-actions">
-            <h2>Administrative Quick Actions &amp; Student Search (Fetch API)</h2>
+            <h2>Administrative Quick Actions &amp; Student Directory</h2>
 
             <form onsubmit="event.preventDefault();">
                 <p>
@@ -70,23 +101,22 @@
         </section>
 
         <section id="backend-hub-links">
-            <h2>Backend Modules &amp; Database Administration (Practicals 7–15)</h2>
-            <p>Direct launch into active server-side controllers and database modules:</p>
+            <h2>Administrative Backend &amp; Database Modules</h2>
+            <p>Direct launch into active server-side management controllers:</p>
             <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:0.75rem;">
-                <a href="../backend/Practical10/index.php" class="btn" style="text-decoration:none; display:inline-block;">P10: Auth &amp; Sessions</a>
-                <a href="../backend/Practical11/index.php" class="btn" style="text-decoration:none; display:inline-block;">P11: Student CRUD</a>
-                <a href="../backend/Practical12/index.php" class="btn" style="text-decoration:none; display:inline-block;">P12: Event Posters</a>
-                <a href="../backend/Practical13/index.php" class="btn" style="text-decoration:none; display:inline-block;">P13: Async JSON API</a>
-                <a href="../backend/Practical14/index.php" class="btn" style="text-decoration:none; display:inline-block;">P14: Superuser RBAC</a>
-                <a href="../backend/Practical15/index.php" class="btn" style="text-decoration:none; display:inline-block; background:var(--secondary-color);">P15: Integration Hub</a>
+                <a href="../backend/Practical10/index.php" class="btn" style="text-decoration:none; display:inline-block;">Authentication &amp; Sessions</a>
+                <a href="../backend/Practical11/index.php" class="btn" style="text-decoration:none; display:inline-block;">Student Directory CRUD</a>
+                <a href="../backend/Practical12/index.php" class="btn" style="text-decoration:none; display:inline-block;">Campus Events &amp; Media</a>
+                <a href="../backend/Practical13/index.php" class="btn" style="text-decoration:none; display:inline-block;">RESTful JSON API Engine</a>
+                <a href="../backend/Practical14/index.php" class="btn" style="text-decoration:none; display:inline-block;">Superuser RBAC Panel</a>
+                <a href="../backend/Practical15/index.php" class="btn" style="text-decoration:none; display:inline-block; background:var(--secondary-color);">Master Integration Hub</a>
             </div>
         </section>
 
         <hr>
 
-        
         <section id="json-student-section">
-            <h2>Dynamic Student Database Records (Fetched from students.json)</h2>
+            <h2>Enrolled Student Database Records</h2>
             <div id="studentList">
                 <p class="loading-state">⏳ Loading student records...</p>
             </div>

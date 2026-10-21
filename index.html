@@ -16,61 +16,92 @@
         <button id="closeNotification" class="close-banner-btn" aria-label="Close notification">&times;</button>
     </div>
 
-    <header>
-        <h1>StudentHub Central Portal</h1>
-        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
-        <p><small>Devang Patel Institute of Advance Technology &amp; Research | Course: <em>ITUE203 - Web Development Frameworks</em></small></p>
-        <div class="header-actions">
-            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
-            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
-            <button id="openModal" class="theme-btn" type="button">ℹ️ Event Modal</button>
+    <!-- TOP ACCESS BAR — University Utility Strip -->
+    <div class="top-access-bar">
+        <div class="top-access-container">
+            <ul class="top-access-links">
+                <li><a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">Alumni</a></li>
+                <li><a href="pages/about.html">Careers</a></li>
+                <li><a href="pages/about.html">NIRF</a></li>
+                <li><a href="pages/about.html">IQAC</a></li>
+                <li><a href="pages/admin.html">Placement</a></li>
+                <li><a href="pages/about.html">Scholarship</a></li>
+                <li><a href="pages/dashboard.html">Library-KRC</a></li>
+                <li><a href="pages/dashboard.html">Student Corner</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+            <div class="top-access-actions">
+                <span class="status-pill"><span class="status-dot"></span> AY 2026-27</span>
+                <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+                <button id="openModal" class="access-btn" type="button">ℹ️ Event Modal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PORTAL HEADER — Distinctive Modern Design -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-identity">
+                <div class="brand-logo-card">
+                    <img src="assets/images/charusat_logo.png" alt="CHARUSAT DEPSTAR Logo" class="brand-logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Student<span class="brand-name-accent">Hub</span></span>
+                    <span class="brand-sub">CHARUSAT DEPSTAR • Academic Portal</span>
+                </div>
+            </a>
+
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
+            <nav aria-label="Main Navigation Menu">
+                <h2>Portal Quick Navigation</h2>
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/dashboard.html">Dashboard</a></li>
+                    <li><a href="pages/events.html">Campus Events</a></li>
+                    <li><a href="pages/profile.html">Profile</a></li>
+                    <li><a href="pages/admin.html">Admin Portal</a></li>
+                    <li><a href="pages/faq.html">FAQ</a></li>
+                    <li><a href="pages/feedback.html">Feedback</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/login.html">Login</a></li>
+                    <li><a href="pages/register.html" class="nav-cta-btn">Register 2026</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <hr>
-
-    <nav aria-label="Main Navigation Menu">
-        <h2>Portal Quick Navigation</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/about.html">About Us</a></li>
-            <li><a href="pages/register.html">Student Registration</a></li>
-            <li><a href="pages/login.html">User Login</a></li>
-            <li><a href="pages/dashboard.html">Student Dashboard</a></li>
-            <li><a href="pages/events.html">Campus Events</a></li>
-            <li><a href="pages/profile.html">Student Profile</a></li>
-            <li><a href="pages/contact.html">Contact Support</a></li>
-            <li><a href="pages/admin.html">Admin Portal</a></li>
-            <li><a href="pages/faq.html">FAQ</a></li>
-            <li><a href="pages/feedback.html">Feedback Survey</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    <nav aria-label="Breadcrumb" class="breadcrumbs">
-        <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    <section>
-        <h2>Portal Quick Search</h2>
-        <form action="index.html" method="get">
-            <p>
-                <label for="site-search">Search Portal Content:</label>
-                <input type="search" id="site-search" name="q" placeholder="Search events, courses, FAQs..." required minlength="2" maxlength="50">
-                <button type="submit">Search</button>
-                <button type="reset">Clear</button>
-            </p>
-        </form>
-    </section>
-
-    <hr>
+    <!-- ELEVATED PAGE TITLE & BREADCRUMBS BAR -->
+    <div class="page-title-bar">
+        <div class="page-title-container">
+            <div class="page-title-left">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
+                    <ul>
+                        <li><a href="index.html" aria-current="page">Home</a></li>
+                    </ul>
+                </nav>
+                <h1 class="page-title">StudentHub Central Portal</h1>
+            </div>
+            <div class="page-title-right">
+                <span class="page-badge">CHARUSAT DEPSTAR • Term 2026-27</span>
+            </div>
+        </div>
+    </div>
 
     <main id="main-content" tabindex="-1">
+
+        <section>
+            <h2>Portal Quick Search</h2>
+            <form action="index.html" method="get">
+                <p>
+                    <label for="site-search">Search Portal Content:</label>
+                    <input type="search" id="site-search" name="q" placeholder="Search events, courses, FAQs..." required minlength="2" maxlength="50">
+                    <button type="submit">Search</button>
+                    <button type="reset">Clear</button>
+                </p>
+            </form>
+        </section>
         <section id="welcome-section">
             <h2>Welcome to StudentHub</h2>
             <p>
@@ -82,7 +113,7 @@
 
             <p>
                 <img src="./assets/images/Background_Img/image.png" 
-                     alt="CHARUSAT Campus Banner Placeholder" 
+                     alt="CHARUSAT University Campus - DEPSTAR" 
                      width="600" 
                      height="200" 
                      loading="lazy" 
@@ -94,7 +125,7 @@
             <h2>Latest Campus Announcements</h2>
 
             <article>
-                <h3>1. Mid-Semester Examination Schedule <small>(Academic Update)</small></h3>
+                <h3>1. Mid-Semester Examination Schedule</h3>
                 <p>Published on: <ins>July 24, 2026</ins> | Author: <b>Academic Section</b></p>
                 <p>
                     The mid-semester timetable for 3<sup>rd</sup> semester B.Tech students has been published. 
@@ -144,9 +175,9 @@
                 </li>
                 <li><strong>Backend &amp; Database Services</strong>
                     <ul>
-                        <li><a href="backend/Practical10/index.php">Authentication &amp; Role Sessions (P10)</a></li>
-                        <li><a href="backend/Practical13/index.php">Async REST JSON API Engine (P13)</a></li>
-                        <li><a href="backend/Practical15/index.php">Full-Stack Master Integration Hub (P15)</a></li>
+                        <li><a href="backend/Practical10/index.php">Authentication &amp; Session Portal</a></li>
+                        <li><a href="backend/Practical13/index.php">Interactive Events Directory</a></li>
+                        <li><a href="backend/Practical15/index.php">Campus System Diagnostics &amp; Integration</a></li>
                     </ul>
                 </li>
             </ul>
@@ -158,8 +189,7 @@
             <h2>External University Links</h2>
             <p>
                 Visit the official website: 
-                <a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">CHARUSAT Official Portal</a> 
-                <small>(Opens in a new tab with <code>rel="noopener noreferrer"</code> for link security)</small>.
+                <a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">CHARUSAT Official Portal</a>.
             </p>
         </aside>
     </main>

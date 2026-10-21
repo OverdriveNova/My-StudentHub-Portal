@@ -1,4 +1,4 @@
-# StudentHub Portal — Lab Portfolio (Practicals 1–9)
+# StudentHub Portal — Lab Portfolio (Practicals 1–15)
 
 **Course:** Web Development Frameworks (ITUE203)
 **Semester:** 3rd Semester, 2026-27 (ODD)
@@ -9,7 +9,7 @@
 
 ## Project Overview
 
-**StudentHub** is a centralized academic campus portal for CHARUSAT students. It provides a unified platform covering public information, student authentication, an academic dashboard, event listings, profile management, admin panels, PHP form handling, relational database integration, and secure user registration — all built progressively across 9 practicals using HTML5, CSS3, vanilla JavaScript, PHP 8.x, and MySQL/MariaDB (via XAMPP).
+**StudentHub** is a centralized academic campus portal for CHARUSAT students. It provides a unified, full-stack platform covering public information, student authentication, an academic dashboard, event listings, profile management, admin panels, PHP form handling, relational database integration, RESTful JSON APIs, secure user registration, role-based access control, file uploads, async AJAX CRUD, and a complete deployment integration hub — built progressively across **15 practicals** using HTML5, CSS3, vanilla JavaScript, PHP 8.x, and MySQL/MariaDB (via XAMPP).
 
 ---
 

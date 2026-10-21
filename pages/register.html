@@ -3,58 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Student Registration Form - Demonstrating Lesson 6 HTML Form Inputs and Attributes">
+    <meta name="description" content="Student Registration Form - Official CHARUSAT Campus Account Creation">
     <title>StudentHub - Registration</title>
     
     <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
 
-    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    
-    <header>
-        <h1>Student Registration Portal</h1>
-        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
-        <p><small>Course: <em>ITUE203 - Web Development Frameworks</em> | Lesson 6 Form Demonstration</small></p>
-        <div class="header-actions">
-            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
-            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+    <!-- TOP ACCESS BAR — University Utility Strip -->
+    <div class="top-access-bar">
+        <div class="top-access-container">
+            <ul class="top-access-links">
+                <li><a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">Alumni</a></li>
+                <li><a href="about.html">Careers</a></li>
+                <li><a href="about.html">NIRF</a></li>
+                <li><a href="about.html">IQAC</a></li>
+                <li><a href="admin.html">Placement</a></li>
+                <li><a href="about.html">Scholarship</a></li>
+                <li><a href="dashboard.html">Library-KRC</a></li>
+                <li><a href="dashboard.html">Student Corner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="top-access-actions">
+                <span class="status-pill"><span class="status-dot"></span> AY 2026-27</span>
+                <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PORTAL HEADER — Distinctive Modern Design -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-identity">
+                <div class="brand-logo-card">
+                    <img src="../assets/images/charusat_logo.png" alt="CHARUSAT DEPSTAR Logo" class="brand-logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Student<span class="brand-name-accent">Hub</span></span>
+                    <span class="brand-sub">CHARUSAT DEPSTAR • Academic Portal</span>
+                </div>
+            </a>
+
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
+            <nav aria-label="Main Navigation Menu">
+                <h2>Portal Quick Navigation</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="events.html">Campus Events</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="admin.html">Admin Portal</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html" class="nav-cta-btn" aria-current="page">Register 2026</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <hr>
-
-    
-    <nav aria-label="Main Navigation Menu">
-        <h2>Portal Quick Navigation</h2>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="register.html">Student Registration</a></li>
-            <li><a href="login.html">User Login</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="events.html">Campus Events</a></li>
-            <li><a href="profile.html">Student Profile</a></li>
-            <li><a href="contact.html">Contact Support</a></li>
-            <li><a href="admin.html">Admin Portal</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="feedback.html">Feedback Survey</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    
-    <nav aria-label="Breadcrumb" class="breadcrumbs">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="register.html" aria-current="page">Student Registration</a></li>
-        </ul>
-    </nav>
-
-    <hr>
+    <!-- ELEVATED PAGE TITLE & BREADCRUMBS BAR -->
+    <div class="page-title-bar">
+        <div class="page-title-container">
+            <div class="page-title-left">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="register.html" aria-current="page">Student Registration</a></li>
+                    </ul>
+                </nav>
+                <h1 class="page-title">Student Registration Portal</h1>
+            </div>
+            <div class="page-title-right">
+                <span class="page-badge">CHARUSAT DEPSTAR • Enrollment 2026</span>
+            </div>
+        </div>
+    </div>
 
     <main id="main-content" tabindex="-1">
         <section id="registration-section">
@@ -72,13 +101,13 @@
 
                 
                 <fieldset>
-                    <legend><strong>System Metadata (Readonly &amp; Disabled Inputs)</strong></legend>
+                    <legend><strong>Institutional System Identity</strong></legend>
                     <p>
-                        <label for="system_code">University Code (Readonly):</label><br>
+                        <label for="system_code">University System Code:</label><br>
                         <input type="text" id="system_code" name="system_code" value="CHARUSAT-DEPSTAR-ITUE203" readonly size="30">
                     </p>
                     <p>
-                        <label for="auto_id">Generated Tracking ID (Disabled):</label><br>
+                        <label for="auto_id">Registration Tracking ID:</label><br>
                         <input type="text" id="auto_id" name="auto_id" value="AUTO-REG-99410" disabled size="30">
                     </p>
                 </fieldset>
@@ -283,7 +312,7 @@
                     <p>
                         <button type="submit">Submit Registration</button>
                         <button type="reset">Reset Form Fields</button>
-                        <button type="button" onclick="alert('StudentHub Registration System V1.0')">Help / Info</button>
+                        <button type="button" onclick="alert('For enrollment assistance or registration queries, please contact the CHARUSAT IT Helpdesk at info@charusat.ac.in')">Help / Info</button>
                     </p>
                 </fieldset>
 

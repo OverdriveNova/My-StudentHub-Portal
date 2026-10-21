@@ -13,48 +13,78 @@
     
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    
-    <header>
-        <h1>Student Profile Management</h1>
-        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
-        <p><small>View and update registered account details for <b>Aarav Patel</b></small></p>
-        <div class="header-actions">
-            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
-            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+    <!-- TOP ACCESS BAR — University Utility Strip -->
+    <div class="top-access-bar">
+        <div class="top-access-container">
+            <ul class="top-access-links">
+                <li><a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">Alumni</a></li>
+                <li><a href="about.html">Careers</a></li>
+                <li><a href="about.html">NIRF</a></li>
+                <li><a href="about.html">IQAC</a></li>
+                <li><a href="admin.html">Placement</a></li>
+                <li><a href="about.html">Scholarship</a></li>
+                <li><a href="dashboard.html">Library-KRC</a></li>
+                <li><a href="dashboard.html">Student Corner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="top-access-actions">
+                <span class="status-pill"><span class="status-dot"></span> AY 2026-27</span>
+                <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PORTAL HEADER — Distinctive Modern Design -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-identity">
+                <div class="brand-logo-card">
+                    <img src="../assets/images/charusat_logo.png" alt="CHARUSAT DEPSTAR Logo" class="brand-logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Student<span class="brand-name-accent">Hub</span></span>
+                    <span class="brand-sub">CHARUSAT DEPSTAR • Academic Portal</span>
+                </div>
+            </a>
+
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
+            <nav aria-label="Main Navigation Menu">
+                <h2>Portal Quick Navigation</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="events.html">Campus Events</a></li>
+                    <li><a href="profile.html" aria-current="page">Profile</a></li>
+                    <li><a href="admin.html">Admin Portal</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html" class="nav-cta-btn">Register 2026</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <hr>
-
-    
-    <nav aria-label="Main Navigation Menu">
-        <h2>Portal Quick Navigation</h2>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="register.html">Student Registration</a></li>
-            <li><a href="login.html">User Login</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="events.html">Campus Events</a></li>
-            <li><a href="profile.html">Student Profile</a></li>
-            <li><a href="contact.html">Contact Support</a></li>
-            <li><a href="admin.html">Admin Portal</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="feedback.html">Feedback Survey</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    
-    <nav aria-label="Breadcrumb" class="breadcrumbs">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="profile.html" aria-current="page">Student Profile</a></li>
-        </ul>
-    </nav>
-
-    <hr>
+    <!-- ELEVATED PAGE TITLE & BREADCRUMBS BAR -->
+    <div class="page-title-bar">
+        <div class="page-title-container">
+            <div class="page-title-left">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="profile.html" aria-current="page">Student Profile</a></li>
+                    </ul>
+                </nav>
+                <h1 class="page-title">Student Profile Management</h1>
+            </div>
+            <div class="page-title-right">
+                <span class="page-badge">ID: 24IT001 • Aarav Patel</span>
+            </div>
+        </div>
+    </div>
 
     <main id="main-content" tabindex="-1">
         
@@ -130,11 +160,10 @@
 
                     
                     <p>
-                        <label for="new_avatar">Upload New Avatar Image (PNG, JPG):</label><br>
+                        <label for="new_avatar">Upload Profile Picture:</label><br>
                         <input type="file" id="new_avatar" name="avatar" accept="image/png, image/jpeg">
                     </p>
 
-                    
                     <p>
                         <label for="prof_name">Full Name *:</label><br>
                         <input type="text" 
@@ -146,9 +175,8 @@
                                maxlength="50">
                     </p>
 
-                    
                     <p>
-                        <label for="prof_email">University Email (Readonly):</label><br>
+                        <label for="prof_email">Official University Email:</label><br>
                         <input type="email" 
                                id="prof_email" 
                                name="email" 

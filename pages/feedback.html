@@ -14,47 +14,78 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     
-    <header>
-        <h1>Student Feedback &amp; Portal Survey</h1>
-        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
-        <p><small>Help us improve StudentHub by rating portal accessibility, tables, and form usability</small></p>
-        <div class="header-actions">
-            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
-            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+    <!-- TOP ACCESS BAR — University Utility Strip -->
+    <div class="top-access-bar">
+        <div class="top-access-container">
+            <ul class="top-access-links">
+                <li><a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">Alumni</a></li>
+                <li><a href="about.html">Careers</a></li>
+                <li><a href="about.html">NIRF</a></li>
+                <li><a href="about.html">IQAC</a></li>
+                <li><a href="admin.html">Placement</a></li>
+                <li><a href="about.html">Scholarship</a></li>
+                <li><a href="dashboard.html">Library-KRC</a></li>
+                <li><a href="dashboard.html">Student Corner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="top-access-actions">
+                <span class="status-pill"><span class="status-dot"></span> AY 2026-27</span>
+                <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PORTAL HEADER — Distinctive Modern Design -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-identity">
+                <div class="brand-logo-card">
+                    <img src="../assets/images/charusat_logo.png" alt="CHARUSAT DEPSTAR Logo" class="brand-logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Student<span class="brand-name-accent">Hub</span></span>
+                    <span class="brand-sub">CHARUSAT DEPSTAR • Academic Portal</span>
+                </div>
+            </a>
+
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
+            <nav aria-label="Main Navigation Menu">
+                <h2>Portal Quick Navigation</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="events.html">Campus Events</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="admin.html">Admin Portal</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html" aria-current="page">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html" class="nav-cta-btn">Register 2026</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <hr>
-
-    
-    <nav aria-label="Main Navigation Menu">
-        <h2>Portal Quick Navigation</h2>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="register.html">Student Registration</a></li>
-            <li><a href="login.html">User Login</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="events.html">Campus Events</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="contact.html">Contact Support</a></li>
-            <li><a href="admin.html">Admin Portal</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="feedback.html">Feedback Survey</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    
-    <nav aria-label="Breadcrumb" class="breadcrumbs">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="feedback.html" aria-current="page">Feedback Survey</a></li>
-        </ul>
-    </nav>
-
-    <hr>
+    <!-- ELEVATED PAGE TITLE & BREADCRUMBS BAR -->
+    <div class="page-title-bar">
+        <div class="page-title-container">
+            <div class="page-title-left">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="feedback.html" aria-current="page">Feedback Survey</a></li>
+                    </ul>
+                </nav>
+                <h1 class="page-title">Student Feedback &amp; Portal Survey</h1>
+            </div>
+            <div class="page-title-right">
+                <span class="page-badge">CHARUSAT DEPSTAR • User Survey</span>
+            </div>
+        </div>
+    </div>
 
     <main id="main-content" tabindex="-1">
         <section id="feedback-form-section">
@@ -154,24 +185,24 @@
 
                     
                     <p>
-                        <label>Which HTML concepts were demonstrated clearly? (Select all that apply):</label><br>
-                        <input type="checkbox" id="feat_structure" name="features[]" value="Structure" checked>
-                        <label for="feat_structure">Lesson 1: Document Structure &amp; Tags</label><br>
+                        <label>Which portal modules do you access most frequently? (Select all that apply):</label><br>
+                        <input type="checkbox" id="feat_structure" name="features[]" value="Curriculum" checked>
+                        <label for="feat_structure">Academic Curriculum &amp; Syllabus</label><br>
 
-                        <input type="checkbox" id="feat_text" name="features[]" value="Formatting" checked>
-                        <label for="feat_text">Lesson 2: Headings &amp; Text Formatting</label><br>
+                        <input type="checkbox" id="feat_text" name="features[]" value="Timetable" checked>
+                        <label for="feat_text">Student Dashboard &amp; Weekly Timetable</label><br>
 
-                        <input type="checkbox" id="feat_links" name="features[]" value="Links_Media" checked>
-                        <label for="feat_links">Lesson 3: Hyperlinks &amp; Media Attributes</label><br>
+                        <input type="checkbox" id="feat_links" name="features[]" value="Events" checked>
+                        <label for="feat_links">Campus Events &amp; Hackathons Directory</label><br>
 
-                        <input type="checkbox" id="feat_lists" name="features[]" value="Lists" checked>
-                        <label for="feat_lists">Lesson 4: Ordered &amp; Unordered Lists</label><br>
+                        <input type="checkbox" id="feat_lists" name="features[]" value="Profile" checked>
+                        <label for="feat_lists">Student Profile &amp; Account Management</label><br>
 
-                        <input type="checkbox" id="feat_tables" name="features[]" value="Tables" checked>
-                        <label for="feat_tables">Lesson 5: Data Tables (Colspan &amp; Rowspan)</label><br>
+                        <input type="checkbox" id="feat_tables" name="features[]" value="Directory" checked>
+                        <label for="feat_tables">Department Contacts &amp; Faculty Directory</label><br>
 
-                        <input type="checkbox" id="feat_forms" name="features[]" value="Forms" checked>
-                        <label for="feat_forms">Lesson 6: Forms &amp; Input Validation Attributes</label>
+                        <input type="checkbox" id="feat_forms" name="features[]" value="Support" checked>
+                        <label for="feat_forms">Inquiry Submission &amp; IT Helpdesk</label>
                     </p>
 
                     

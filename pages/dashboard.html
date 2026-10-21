@@ -13,63 +13,94 @@
     
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    
-    <header>
-        <h1>Student Academic Dashboard</h1>
-        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
-        <p><small>Semester 3 (2026-27 ODD Term) | Logged-in User: <b>Aarav Patel</b></small></p>
-        <div class="header-actions">
-            <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
-            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false">☰ Navigation</button>
+    <!-- TOP ACCESS BAR — University Utility Strip -->
+    <div class="top-access-bar">
+        <div class="top-access-container">
+            <ul class="top-access-links">
+                <li><a href="https://www.charusat.ac.in" target="_blank" rel="noopener noreferrer">Alumni</a></li>
+                <li><a href="about.html">Careers</a></li>
+                <li><a href="about.html">NIRF</a></li>
+                <li><a href="about.html">IQAC</a></li>
+                <li><a href="admin.html">Placement</a></li>
+                <li><a href="about.html">Scholarship</a></li>
+                <li><a href="dashboard.html">Library-KRC</a></li>
+                <li><a href="dashboard.html">Student Corner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="top-access-actions">
+                <span class="status-pill"><span class="status-dot"></span> AY 2026-27</span>
+                <button id="themeButton" class="theme-btn" type="button">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PORTAL HEADER — Distinctive Modern Design -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-identity">
+                <div class="brand-logo-card">
+                    <img src="../assets/images/charusat_logo.png" alt="CHARUSAT DEPSTAR Logo" class="brand-logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Student<span class="brand-name-accent">Hub</span></span>
+                    <span class="brand-sub">CHARUSAT DEPSTAR • Academic Portal</span>
+                </div>
+            </a>
+
+            <button id="menuButton" class="menu-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
+            <nav aria-label="Main Navigation Menu">
+                <h2>Portal Quick Navigation</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+                    <li><a href="events.html">Campus Events</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="admin.html">Admin Portal</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html" class="nav-cta-btn">Register 2026</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <hr>
-
-    
-    <nav aria-label="Main Navigation Menu">
-        <h2>Portal Quick Navigation</h2>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="register.html">Student Registration</a></li>
-            <li><a href="login.html">User Login</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="events.html">Campus Events</a></li>
-            <li><a href="profile.html">Student Profile</a></li>
-            <li><a href="contact.html">Contact Support</a></li>
-            <li><a href="admin.html">Admin Portal</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="feedback.html">Feedback Survey</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    
-    <nav aria-label="Breadcrumb" class="breadcrumbs">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    
-    <section id="dashboard-anchors">
-        <h2>Dashboard Quick Jump Links</h2>
-        <p>Jump to section: 
-            <a href="#student-info">Student Profile Summary</a> | 
-            <a href="#courses">Enrolled Courses Table</a> | 
-            <a href="#schedule">Weekly Schedule</a> | 
-            <a href="#notices">Academic Notices</a>
-        </p>
-    </section>
-
-    <hr>
+    <!-- ELEVATED PAGE TITLE & BREADCRUMBS BAR -->
+    <div class="page-title-bar">
+        <div class="page-title-container">
+            <div class="page-title-left">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+                    </ul>
+                </nav>
+                <h1 class="page-title">Student Academic Dashboard</h1>
+            </div>
+            <div class="page-title-right">
+                <span class="page-badge">Semester 3 • Aarav Patel (24IT001)</span>
+            </div>
+        </div>
+    </div>
 
     <main id="main-content" tabindex="-1">
+
+        <!-- QUICK JUMP NAVIGATION PANEL (Structured Card) -->
+        <section id="dashboard-anchors" class="quick-jump-panel">
+            <div class="panel-header">
+                <h2>⚡ Quick Navigation Jump Bar</h2>
+                <span class="panel-sub">Direct access to dashboard modules</span>
+            </div>
+            <div class="quick-jump-links">
+                <a href="#student-info" class="jump-pill">Student Profile Summary</a>
+                <a href="#courses" class="jump-pill">Enrolled Courses Table</a>
+                <a href="#schedule" class="jump-pill">Weekly Schedule</a>
+                <a href="#notices" class="jump-pill">Academic Notices</a>
+            </div>
+        </section>
         
         <section id="student-info">
             <h2>Student Profile Summary</h2>
@@ -175,7 +206,7 @@
 
         
         <section id="schedule">
-            <h2>Weekly Academic Schedule (Lab &amp; Practical Order)</h2>
+            <h2>Weekly Academic Schedule</h2>
             <ol type="I">
                 <li><strong>Monday &amp; Wednesday:</strong> Web Development Frameworks (ITUE203) - Computer Lab 3 (09:00 AM - 11:00 AM)</li>
                 <li><strong>Tuesday:</strong> Database Management Systems (ITUE202) - Computer Lab 1 (11:15 AM - 01:15 PM)</li>
@@ -186,16 +217,15 @@
 
         <hr>
 
-        
         <aside id="notices">
             <h2>Academic Notices for Aarav Patel</h2>
             <ul>
                 <li>
-                    <strong>Practical Submission Reminder:</strong> 
-                    Practical 1 &amp; Practical 2 HTML files must be uploaded to GitHub before <ins>August 2, 2026</ins>.
+                    <strong>Academic Submission Notice:</strong> 
+                    Mid-term course assignments and laboratory reports must be submitted before <ins>August 2, 2026</ins>.
                 </li>
                 <li>
-                    <strong>Workshop Invitation:</strong> 
+                    <strong>Campus Announcement:</strong> 
                     Web Innovation Hackathon details are posted on the <a href="events.html">Campus Events Page</a>.
                 </li>
             </ul>
